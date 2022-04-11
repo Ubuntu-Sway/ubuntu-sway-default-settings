@@ -1,0 +1,5 @@
+ubuntusway-default-settings (1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 11 Apr 2022 15:09:27 +0400
