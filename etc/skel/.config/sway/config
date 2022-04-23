@@ -4,11 +4,23 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-include /etc/sway/config-vars.d/*
+# Global variables
+include /etc/sway/variables
+
+# User variables
+include $HOME/.config/sway/variables.d/*.conf
+
+include /etc/sway/outputs/*
+include /etc/sway/inputs/*
+
+# include modes
+include /etc/sway/modes/*
+
+# Additional configs
 include /etc/sway/config.d/*
-include ~/.config/sway/config.d/*
-include ~/.config/sway/outputs/*
-include ~/.config/sway/inputs/*
+
+# User config
+include $HOME/.config/sway/config.d/*.conf
 
 ### Idle configuration
 #
