@@ -22,3 +22,6 @@ set $bindsym bindsym --to-code
 
 # Pulseaudo command
 set $pulseaudio $term_float pulsemixer
+
+# calendar application
+set $calendar $term_float khal interactive
