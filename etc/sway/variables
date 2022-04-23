@@ -19,3 +19,6 @@ set $menu wofi --show drun --allow-images --allow-markup --hide-scroll --no-acti
 
 # Add --to-code to bindsym, support for non-latin layouts
 set $bindsym bindsym --to-code
+
+# Pulseaudo command
+set $pulseaudio $term_float pulsemixer
