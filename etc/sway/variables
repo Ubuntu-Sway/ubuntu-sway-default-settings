@@ -34,6 +34,18 @@ set $pulseaudio $term_float pulsemixer
 # calendar application
 set $calendar $term_float khal interactive
 
+# workspace names
+set $ws1 number 1
+set $ws2 number 2
+set $ws3 number 3
+set $ws4 number 4
+set $ws5 number 5
+set $ws6 number 6
+set $ws7 number 7
+set $ws8 number 8
+set $ws9 number 9
+set $ws10 number 10
+
 # screenshot
 set $grimshot /usr/share/sway/scripts/grimshot
 set $screenshot_screen_clipboard $grimshot --notify copy output
