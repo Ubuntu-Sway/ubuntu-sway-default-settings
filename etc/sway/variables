@@ -23,6 +23,11 @@ set $bindsym bindsym --to-code
 # Onscreen bar (WOB)
 set $onscreen_bar bash /usr/share/sway/scripts/wob.sh
 
+# brightness control
+set $brightness_step bash -c 'echo $(( $(light -Mr) / 100 * 5 < 1 ? 1 : $(( $(light -Mr) / 100 * 5 )) ))'
+set $brightness_up light -r -A $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
+set $brightness_down light -r -U $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
+
 # Pulseaudo command
 set $pulseaudio $term_float pulsemixer
 
