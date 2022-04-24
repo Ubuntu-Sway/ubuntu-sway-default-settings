@@ -1,0 +1,6 @@
+# some global theme specific variables
+set $gtk-theme Yaru-dark
+set $icon-theme Yaru-dark
+set $cursor-theme xcursor-breeze
+set $gui-font Ubuntu 11
+set $term-font Ubuntu Mono 13

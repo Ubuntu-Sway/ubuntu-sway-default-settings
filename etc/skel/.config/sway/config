@@ -4,6 +4,12 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+# Styles
+set $theme /usr/share/sway/themes/yaru-sway
+
+# theme variables
+include $theme/variables
+
 # Global variables
 include /etc/sway/variables
 
