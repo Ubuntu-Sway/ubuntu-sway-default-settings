@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
+    "modules-right": ["sway/language", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -21,64 +21,92 @@
     //         "default": ""
     //     }
     // },
+    
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+    
+    "sway/language": {
+        "format": " {}",
+        "min-length": 5,
+        "tooltip": false,
+        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
     },
+    
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "on-click": "swaymsg exec \\$calendar"
     },
+    
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+        "states": {
+          "warning": 70,
+          "critical": 90
+          },
+          "on-click": "swaymsg exec \\$term_float htop"
     },
+    
     "memory": {
-        "format": "{}% "
+        "interval": 30,
+        "format": "{}% ",
+        "states": {
+          "warning": 70,
+          "critical": 90
+        },
+        "on-click": "swaymsg exec \\$term_float htop"
     },
+    
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "tooltip": false,
+        "on-click": "swaymsg exec \"\\$term_float watch sensors\""
     },
+    
     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
+    
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": " ",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} ({essid}): {ipaddr}",
+        "on-click": "swaymsg exec \\$term_float nmtui"
     },
+    
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
-    }
+        "on-click": "swaymsg exec \\$pulseaudio",
+        "on-click-right": "pavucontrol-qt",
+    },
+    
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
 }
