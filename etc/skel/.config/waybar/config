@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["sway/language", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
+    "modules-right": ["custom/wf-recorder", "sway/language", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -24,6 +24,17 @@
     
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    
+    "custom/wf-recorder": {
+         "interval": "once",
+         "return-type": "json",
+         "format": "{}",
+         "tooltip-format": "{tooltip}",
+         "exec": "echo '{\"class\": \"recording\",\"text\":\"\",\"tooltip\":\"press $mod+Esc to stop recording\"}'",
+         "exec-if": "pgrep wf-recorder",
+         "on-click": "killall -s SIGINT wf-recorder",
+         "signal": 8
     },
     
     "sway/language": {
