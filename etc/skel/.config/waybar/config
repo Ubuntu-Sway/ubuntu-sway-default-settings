@@ -2,28 +2,116 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["custom/wf-recorder", "sway/language", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "modules-left": ["custom/menu", "sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": ["custom/wf-recorder", "custom/weather"],
+    "modules-right": [
+        "custom/playerctl",
+        "sway/language",
+        "cpu",
+        "memory",
+        "battery",
+        "temperature",
+        "network",
+        "pulseaudio",
+        "custom/clock",
+        "tray"
+    ],
+    
+    "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "urgent": "",
+        "focused": "",
+        "default": ""
+      }
+    },
+    
+    "sway/language": {
+        "format": " {}",
+        "min-length": 5,
+        "tooltip": false,
+        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
+    },
     
     "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "format": "<span style=\"italic\">{}</span>",
+        "tooltip": false
+    },
+    
+    "sway/window": {
+        "format": "{}",
+        "max-length": 50,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+       "format": "{icon} {volume}%{format_source}",
+       "format-bluetooth": "{volume}% {icon}",
+       "format-muted": " {format_source}",
+       "format-source": "",
+       "format-source-muted": "",
+       "format-icons": {
+           "headphone": "",
+           "default": ["", "", ""]
+       },
+       "tooltip-format": "{icon} {volume}% {format_source}",
+       "on-click": "swaymsg exec \\$pulseaudio",
+       "on-click-right": "pavucontrol-qt",
+       "on-scroll-up": "swaymsg exec \\$volume_up",
+       "on-scroll-down": "swaymsg exec \\$volume_down"
+    },
+    
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    
+    "custom/menu": {
+       "format": "",
+       "on-click": "swaymsg exec \\$menu",
+       "tooltip": false,
+    },
+    
+    "network": {
+       "format-wifi": " ",
+       "format-ethernet": "",
+       "format-disconnected": "",
+       "tooltip-format": "{ifname} ({essid}): {ipaddr}",
+       "on-click": "swaymsg exec \\$term_float nmtui"
+    },
+    
+    "custom/clock": {
+        "exec": "echo ''$(date +'%H:%M | %e %b %Y')''",
+        "interval": 5,
+        "on-click": "swaymsg exec \\$calendar"
+    },
+    
+    "cpu": {
+        "interval": 5,
+        "format": " {usage}%",
+        "states": {
+          "warning": 70,
+          "critical": 90
+          },
+    "on-click": "swaymsg exec \\$term_float htop"
+    },
+    
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "states": {
+          "warning": 70,
+          "critical": 90
+        },
+    "on-click": "swaymsg exec \\$term_float htop"
+    
     },
     
     "custom/wf-recorder": {
@@ -36,88 +124,65 @@
          "on-click": "killall -s SIGINT wf-recorder",
          "signal": 8
     },
-    
-    "sway/language": {
-        "format": " {}",
-        "min-length": 5,
-        "tooltip": false,
-        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
-    },
-    
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-        "on-click": "swaymsg exec \\$calendar"
-    },
-    
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false,
-        "states": {
-          "warning": 70,
-          "critical": 90
-          },
-          "on-click": "swaymsg exec \\$term_float htop"
-    },
-    
-    "memory": {
-        "interval": 30,
-        "format": "{}% ",
-        "states": {
-          "warning": 70,
-          "critical": 90
+
+    "custom/playerctl": {
+        "interval": "once",
+        "tooltip": true,
+        "return-type": "json",
+        "format": "{icon}",
+        "format-icons": {
+            "Playing": "",
+            "Paused": ""
         },
-        "on-click": "swaymsg exec \\$term_float htop"
+        "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\", \"tooltip\": \"{{playerName}}:  {{markup_escape(title)}} - {{markup_escape(artist)}}\" }'",
+        "on-click": "playerctl play-pause; pkill -RTMIN+5 waybar",
+        "on-click-right": "playerctl next; pkill -RTMIN+5 waybar",
+        "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
+        "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
+        "signal": 5
+    },
+    
+    "custom/weather": {
+        "icon-size": 42,
+        "format": "{icon} {}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "~/.config/sway/scripts/weather.py",
+        "return-type": "json",
+        "format-icons": {
+           "Unknown": "✨",
+           "Cloudy": "",
+           "Fog": "🌫",
+           "HeavyRain": "🌧",
+           "HeavyShowers": "🌧",
+           "HeavySnow": "❄️",
+           "HeavySnowShowers": "❄️",
+           "LightRain": "🌦",
+           "LightShowers": "🌦",
+           "LightSleet": "🌧",
+           "LightSleetShowers": "🌧",
+           "LightSnow": "🌨",
+           "LightSnowShowers": "🌨",
+           "PartlyCloudy": "⛅️",
+           "Sunny": "☀️",
+           "ThunderyHeavyRain": "🌩",
+           "ThunderyShowers": "⛈",
+           "ThunderySnowShowers": "⛈",
+           "VeryCloudy": ""
+        }
     },
     
     "temperature": {
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
+        "critical-threshold": 90,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""],
         "tooltip": false,
         "on-click": "swaymsg exec \"\\$term_float watch sensors\""
     },
     
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-    
-    "network": {
-        "format-wifi": " ",
-        "format-ethernet": "",
-        "format-disconnected": "",
-        "tooltip-format": "{ifname} ({essid}): {ipaddr}",
-        "on-click": "swaymsg exec \\$term_float nmtui"
-    },
-    
-    "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "swaymsg exec \\$pulseaudio",
-        "on-click-right": "pavucontrol-qt",
-    },
-    
     "tray": {
         "icon-size": 21,
         "spacing": 10
-    },
+    }
 }
