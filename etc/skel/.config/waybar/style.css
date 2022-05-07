@@ -69,14 +69,13 @@ window#waybar.hidden {
     background: @background_color;
 }
 
-#custom-clock,
-#custom-menu,
+#clock,
 #custom-playerctl,
+#custom-weather,
 #battery,
 #cpu,
 #language,
 #memory,
-#temperature,
 #network,
 #pulseaudio,
 #tray,
@@ -87,14 +86,12 @@ window#waybar.hidden {
     margin: 0 4px;
 }
 
-#custom-clock {
+#clock {
     border-bottom: 3px solid @theme_selected_bg_color;
 }
 
-#custom-menu {
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: @theme_selected_bg_color;
+#custom-weather {
+    border-bottom: 3px solid @theme_selected_bg_color;
 }
 
 #custom-playerctl {
@@ -160,14 +157,6 @@ label:focus {
 
 #pulseaudio.muted {
     border-bottom: 3px solid #ffffff;
-}
-
-#temperature {
-    border-bottom: 3px solid @theme_selected_bg_color;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
 }
 
 #custom-wf-recorder {

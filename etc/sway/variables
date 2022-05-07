@@ -28,6 +28,11 @@ set $brightness_step bash -c 'echo $(( $(light -Mr) / 100 * 5 < 1 ? 1 : $(( $(li
 set $brightness_up light -r -A $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
 set $brightness_down light -r -U $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
 
+# Volume controll
+set $volume_down pulsemixer --change-volume -5 && $onscreen_bar $(pulsemixer --get-volume)
+set $volume_up pulsemixer --change-volume +5 && $onscreen_bar $(pulsemixer --get-volume)
+set $volume_mute pulsemixer --toggle-mute && $(pulsemixer --get-volume)
+
 # Pulseaudo command
 set $pulseaudio $term_float pulsemixer
 

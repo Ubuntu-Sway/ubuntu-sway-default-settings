@@ -2,9 +2,11 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "modules-left": ["custom/menu", "sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["custom/wf-recorder", "custom/weather"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
     "modules-right": [
+        "custom/wf-recorder",
+        "custom/weather",
         "custom/playerctl",
         "sway/language",
         "cpu",
@@ -13,24 +15,14 @@
         "temperature",
         "network",
         "pulseaudio",
-        "custom/clock",
+        "clock",
         "tray"
     ],
     
     "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format": "{name}: {icon}",
-    "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "urgent": "",
-        "focused": "",
-        "default": ""
-      }
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{name}",
     },
     
     "sway/language": {
@@ -55,7 +47,7 @@
        "format": "{icon} {volume}%{format_source}",
        "format-bluetooth": "{volume}% {icon}",
        "format-muted": " {format_source}",
-       "format-source": "",
+       "format-source": "  {volume}%",
        "format-source-muted": "",
        "format-icons": {
            "headphone": "",
@@ -63,7 +55,7 @@
        },
        "tooltip-format": "{icon} {volume}% {format_source}",
        "on-click": "swaymsg exec \\$pulseaudio",
-       "on-click-right": "pavucontrol-qt",
+       "on-click-right": "swaymsg exec \\$volume_mute",
        "on-scroll-up": "swaymsg exec \\$volume_up",
        "on-scroll-down": "swaymsg exec \\$volume_down"
     },
@@ -71,12 +63,6 @@
     "battery": {
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""]
-    },
-    
-    "custom/menu": {
-       "format": "",
-       "on-click": "swaymsg exec \\$menu",
-       "tooltip": false,
     },
     
     "network": {
@@ -87,8 +73,9 @@
        "on-click": "swaymsg exec \\$term_float nmtui"
     },
     
-    "custom/clock": {
-        "exec": "echo ''$(date +'%H:%M | %e %b %Y')''",
+    "clock": {
+        "format": "{:%e %b %H:%M}",
+        "tooltip": false,
         "interval": 5,
         "on-click": "swaymsg exec \\$calendar"
     },
@@ -147,7 +134,7 @@
         "format": "{icon} {}",
         "tooltip": true,
         "interval": 3600,
-        "exec": "~/.config/sway/scripts/weather.py",
+        "exec": "/usr/share/sway/scripts/weather.py",
         "return-type": "json",
         "format-icons": {
            "Unknown": "✨",
@@ -170,15 +157,6 @@
            "ThunderySnowShowers": "⛈",
            "VeryCloudy": ""
         }
-    },
-    
-    "temperature": {
-        "critical-threshold": 90,
-        "interval": 5,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""],
-        "tooltip": false,
-        "on-click": "swaymsg exec \"\\$term_float watch sensors\""
     },
     
     "tray": {
