@@ -21,7 +21,7 @@ set $menu wofi --show drun --allow-images --allow-markup --hide-scroll --no-acti
 set $bindsym bindsym --to-code
 
 # Onscreen bar (WOB)
-set $onscreen_bar bash /usr/share/sway/scripts/wob.sh
+set $onscreen_bar bash /usr/share/sway/scripts/wob.sh "$accent-colorFF" "$background-colorFF"
 
 # brightness control
 set $brightness_step bash -c 'echo $(( $(light -Mr) / 100 * 5 < 1 ? 1 : $(( $(light -Mr) / 100 * 5 )) ))'
