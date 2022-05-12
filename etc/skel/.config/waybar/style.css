@@ -23,7 +23,7 @@
 /* Reset all styles */
 * {
     border: none;
-    border-radius: 0;
+    border-radius: 4;
     min-height: 0;
     margin: 0;
     padding: 0;
@@ -33,13 +33,13 @@
 #waybar {
     background: @theme_bg_color;
     color: @wm_icon_bg;
-    font-family: Cantarell, Noto Sans, sans-serif;
-    font-size: 12px;
+    font-family: Ubuntu, Noto Sans, sans-serif;
+    font-size: 14px;
 }
 
-#window {
-    font-weight: bold;
+window#waybar {
     margin-left: 10px;
+    border-radius: 0;
 }
 
 window#waybar.hidden {
@@ -48,9 +48,7 @@ window#waybar.hidden {
 
 #workspaces button {
     /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 0.5em;
     color: @theme_selected_bg_color;
 }
 
@@ -83,26 +81,30 @@ window#waybar.hidden {
 #idle_inhibitor {
     padding-left: 10px;
     padding-right: 10px;
-    margin: 0 4px;
+    margin: 4px 3px;
 }
 
 #clock {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #custom-weather {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #custom-playerctl {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #battery {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #battery.warning {
@@ -128,35 +130,43 @@ label:focus {
 }
 
 #cpu {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #language {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #memory {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #custom-gpu-usage {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #network {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #network.disconnected {
-    border-bottom: 3px solid #ffffff;
+    background: @theme_selected_fg_color;
+    color: #000000
 }
 
 #pulseaudio {
-    border-bottom: 3px solid @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 #pulseaudio.muted {
-    border-bottom: 3px solid #ffffff;
+    background: @theme_selected_fg_color;
+    color: #000000;
 }
 
 #custom-wf-recorder {
