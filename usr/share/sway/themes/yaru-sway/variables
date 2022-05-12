@@ -15,7 +15,7 @@ set $gui-font Ubuntu 11
 set $term-font Ubuntu Mono 13
 
 set $color0  #2f2f2f
-set $color1  #2c2c2c
+set $color1  #1b1b1b
 set $color2  #3B758C
 set $color3  #41535B
 set $color4  #43a5d5
