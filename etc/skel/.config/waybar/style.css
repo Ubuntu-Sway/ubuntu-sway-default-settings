@@ -49,6 +49,7 @@ window#waybar.hidden {
 #workspaces button {
     /* To compensate for the top border and still have vertical centering */
     padding: 0 0.5em;
+    margin: 4px 3px;
     color: @theme_selected_bg_color;
 }
 
