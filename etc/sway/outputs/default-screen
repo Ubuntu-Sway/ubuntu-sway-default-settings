@@ -1,6 +1,4 @@
-﻿### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+﻿# Default wallpaper
 output * bg /usr/share/backgrounds/ubuntusway/jammy-ubuntusway_1920x1080.png fill
 #
 # Example configuration:

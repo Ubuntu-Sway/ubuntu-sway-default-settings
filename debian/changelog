@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.5-1~jammy) jammy; urgency=medium
+
+  * Style fixes
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 12 May 2022 23:57:24 +0400
+
 ubuntusway-default-settings (1.4-1~jammy) jammy; urgency=medium
 
   * Update wybar style
