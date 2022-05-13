@@ -1,5 +1,4 @@
-﻿# Default wallpaper
-output * bg /usr/share/backgrounds/ubuntusway/jammy-ubuntusway_1920x1080.png fill
+﻿output * bg /usr/share/backgrounds/ubuntusway/jammy-ubuntusway_1920x1080.png fill
 #
 # Example configuration:
 #

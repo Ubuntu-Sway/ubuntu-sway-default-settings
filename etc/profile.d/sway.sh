@@ -1,3 +1,6 @@
+#Set XDG_CURRENT_DESKTOP to Sway (for screencasting and screensharing capabilities)
+export XDG_CURRENT_DESKTOP=sway
+
 # Force Wayland for Mozilla Firefox
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_DBUS_REMOTE=1

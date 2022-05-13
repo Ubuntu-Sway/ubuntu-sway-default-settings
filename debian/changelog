@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.6-1~jammy) jammy; urgency=medium
+
+  * Fix outputs config
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 13 May 2022 18:48:25 +0400
+
 ubuntusway-default-settings (1.5-1~jammy) jammy; urgency=medium
 
   * Style fixes
