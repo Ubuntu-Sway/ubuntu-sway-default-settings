@@ -20,6 +20,9 @@ set $menu wofi --show drun --allow-images --allow-markup --hide-scroll --no-acti
 # Add --to-code to bindsym, support for non-latin layouts
 set $bindsym bindsym --to-code
 
+# background
+set $background /usr/share/backgrounds/ubuntusway/jammy-ubuntusway_1920x1080.png
+
 # Onscreen bar (WOB)
 set $onscreen_bar bash /usr/share/sway/scripts/wob.sh "$accent-colorFF" "$background-colorFF"
 
