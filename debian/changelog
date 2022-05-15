@@ -1,3 +1,21 @@
+ubuntusway-default-settings (1.10-1~jammy) jammy; urgency=medium
+
+  * Rebuild
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 15 May 2022 00:41:22 +0400
+
+ubuntusway-default-settings (1.9-1~jammy) jammy; urgency=medium
+
+  * Rebuild
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 14 May 2022 22:08:14 +0400
+
+ubuntusway-default-settings (1.7-1~jammy) jammy; urgency=medium
+
+  * Export XDG_CURRENT_DESKTOP=sway, fix output
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 13 May 2022 21:30:34 +0400
+
 ubuntusway-default-settings (1.6-1~jammy) jammy; urgency=medium
 
   * Fix outputs config
