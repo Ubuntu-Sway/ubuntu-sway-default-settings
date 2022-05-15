@@ -14,8 +14,11 @@ set $term foot
 set $term_float footclient -a floating_shell
 set $term_float_portrait footclient -a floating_shell_portrait
 
+# wofi theme
+set $wofi_theme "* {lightbg: $background-color; background: $background-color; lightfg: $accent-color;}"
+
 # Your preferred application launcher
-set $menu wofi --show drun --allow-images --allow-markup --hide-scroll --no-actions
+set $menu wofi --show drun --allow-images --allow-markup --hide-scroll --no-actions -theme-str $wofi_theme -lines 10 -width 35
 
 # Add --to-code to bindsym, support for non-latin layouts
 set $bindsym bindsym --to-code
@@ -36,6 +39,10 @@ set $volume_down pulsemixer --change-volume -5 && $onscreen_bar $(pulsemixer --g
 set $volume_up pulsemixer --change-volume +5 && $onscreen_bar $(pulsemixer --get-volume)
 set $volume_mute pulsemixer --toggle-mute && $(pulsemixer --get-volume)
 
+# clipboard history
+set $clipboard cliphist list | wofi -dmenu -p "Select item to copy" -lines 10 -width 35 -theme-str $wofi_theme | cliphist decode | wl-copy
+set $clipboard-del cliphist list | wofi -dmenu -p "Select item to delete" -lines 10 -width 35 -theme-str $wofi_theme | cliphist delete
+
 # Pulseaudo command
 set $pulseaudio $term_float pulsemixer
 
@@ -55,7 +62,7 @@ set $ws9 number 9
 set $ws10 number 10
 
 # screenshot
-set $grimshot /usr/share/sway/scripts/grimshot
+set $grimshot /usr/bin/grimshot
 set $screenshot_screen_clipboard $grimshot --notify copy output
 set $screenshot_screen_file $grimshot --notify save output
 set $screenshot_selection_clipboard $grimshot --notify copy window
