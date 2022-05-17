@@ -72,6 +72,7 @@ window#waybar.hidden {
 #custom-playerctl,
 #custom-weather,
 #custom-clipboard,
+#custom-menu,
 #battery,
 #cpu,
 #language,
@@ -102,6 +103,11 @@ window#waybar.hidden {
 }
 
 #custom-clipboard {
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+#custom-menu {
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }

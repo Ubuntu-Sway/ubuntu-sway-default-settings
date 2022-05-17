@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": ["custom/menu", "sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": [
         "custom/wf-recorder",
@@ -42,6 +42,12 @@
         "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)' item(s) in the clipboard\r(Mid click to clear)'",
         "exec-if": "[ -x \"$(command -v cliphist)\" ] && [ $(cliphist list | wc -l) -gt 0 ]",
         "signal": 9
+    },
+
+    "custom/menu": {
+        "format": "",
+        "on-click": "exec nwg-drawer",
+        "tooltip": false
     },
     
     "sway/mode": {
