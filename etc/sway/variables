@@ -40,6 +40,22 @@ set $volume_mute pulsemixer --toggle-mute && $(pulsemixer --get-volume)
 set $clipboard cliphist list | wofi -dmenu -p "Select item to copy" -lines 10 -width 35 -theme-str $wofi_theme | cliphist decode | wl-copy
 set $clipboard-del cliphist list | wofi -dmenu -p "Select item to delete" -lines 10 -width 35 -theme-str $wofi_theme | cliphist delete
 
+### Idle configuration
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+#
+set $idle_timeout 240
+set $locking_timeout 300
+set $screen_timeout 600
+set $idle swayidle -w \
+    timeout $idle_timeout 'light -G > /tmp/brightness && light -S 10' resume 'light -S $([ -f /tmp/brightness ] && cat /tmp/brightness || echo 100%)' \
+    timeout $locking_timeout "~/.config/swaylock/lock.sh" \
+    timeout $screen_timeout 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep 'playerctl pause' \
+    before-sleep "~/.config/swaylock/lock.sh" &
+
 # Pulseaudo command
 set $pulseaudio $term_float pulsemixer
 

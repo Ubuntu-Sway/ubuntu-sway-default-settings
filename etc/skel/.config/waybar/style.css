@@ -37,6 +37,10 @@
     font-size: 14px;
 }
 
+#window {
+    margin-left: 10px;
+}
+
 window#waybar {
     margin-left: 10px;
     border-radius: 0;
@@ -193,10 +197,10 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background: @theme_selected_bg_color;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }

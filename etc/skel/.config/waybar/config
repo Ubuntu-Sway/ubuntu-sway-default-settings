@@ -2,12 +2,13 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "modules-left": ["custom/menu", "sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
+    "modules-center": ["sway/mode"],
     "modules-right": [
         "custom/wf-recorder",
         "custom/weather",
         "custom/playerctl",
+        "idle_inhibitor",
         "sway/language",
         "custom/clipboard",
         "cpu",
@@ -58,7 +59,15 @@
     "sway/window": {
         "format": "{}",
         "max-length": 50,
-        "tooltip": false
+        "tooltip": true
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     },
 
     "pulseaudio": {
