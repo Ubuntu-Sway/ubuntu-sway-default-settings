@@ -10,7 +10,7 @@ rm screen-out.png
 
 #Adds a blur, vignette and lock logo
 ffmpeg -i screen.png -vf \
-  "[in] gblur=sigma=10  [blurred]; movie=$HOME/.config/swaylock/lock.png [logo]; 
+  "[in] gblur=sigma=10, vignette=PI/5  [blurred]; movie=$HOME/.config/swaylock/lock.png [logo]; 
   [blurred][logo] overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/3 [out]" \
   screen-out.png
 
