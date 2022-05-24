@@ -54,7 +54,8 @@ set $idle swayidle -w \
     timeout $screen_timeout 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
     before-sleep 'playerctl pause' \
-    before-sleep "~/.config/swaylock/lock.sh" &
+    before-sleep "~/.config/swaylock/lock.sh" & \
+    lock "~/.config/swaylock/lock.sh" &
 
 # Pulseaudo command
 set $pulseaudio $term_float pulsemixer
