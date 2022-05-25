@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.16-1~jammy) jammy; urgency=medium
+
+  * Fix screenlock on laptops
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 25 May 2022 02:08:10 +0400
+
 ubuntusway-default-settings (1.10-1~jammy) jammy; urgency=medium
 
   * Rebuild
