@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.18-1~jammy) jammy; urgency=medium
+
+  * Fix autostarting polkit-gnome
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 25 May 2022 23:41:37 +0400
+
 ubuntusway-default-settings (1.17-1~jammy) jammy; urgency=medium
 
   * Remove lock logo
