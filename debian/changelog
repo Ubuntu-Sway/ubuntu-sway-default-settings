@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.17-1~jammy) jammy; urgency=medium
+
+  * Remove lock logo
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 25 May 2022 11:58:13 +0400
+
 ubuntusway-default-settings (1.16-1~jammy) jammy; urgency=medium
 
   * Fix screenlock on laptops
