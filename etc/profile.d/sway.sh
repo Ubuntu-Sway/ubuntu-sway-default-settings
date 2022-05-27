@@ -13,18 +13,11 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 #Java XWayland blank screens fix
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-#Check if system is running on VM
+#Check if system is running on Virtual Box
 
-if [ $(systemd-detect-virt) = none ]; then
-	 echo "No VM is detected"
-elif
-   [ $(systemd-detect-virt) = oracle ]; then
+if [ $(systemd-detect-virt) = oracle ]; then
      echo "Running in VirtualBox. Disabling hardware cursors"
      export WLR_NO_HARDWARE_CURSORS=1
-elif
-   [ $(systemd-detect-virt) = KVM ]; then
-     echo "Running in QEMU/KVM. Disabling hardware cursors"
-     export WLR_NO_HARDWARE_CURSORS=1
 else
-     echo "Unknown VM. If your cursor is invisible, set WLR_NO_HARDWARE_CURSORS to 1"
+     echo "No VM is detected"
 fi
