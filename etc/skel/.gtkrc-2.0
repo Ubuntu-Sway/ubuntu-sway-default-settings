@@ -3,7 +3,7 @@
 
 gtk-theme-name="Yaru-prussiangreen-dark"
 gtk-icon-theme-name="Yaru-prussiangreen-dark"
-gtk-font-name="-font"
+gtk-font-name="Ubuntu 11"
 gtk-cursor-theme-name="breeze_cursors"
 gtk-cursor-theme-size=24
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
