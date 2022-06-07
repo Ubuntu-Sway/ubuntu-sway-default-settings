@@ -5,15 +5,6 @@ default_border pixel 2
 smart_borders on
 gaps inner 6
 
-seat seat0 xcursor_theme "breeze_cursors"
-
-# some global theme specific variables
-set $gtk-theme Yaru-prussiangreen-dark
-set $icon-theme Yaru-prussiangreen-dark
-set $cursor-theme xcursor-breeze
-set $gui-font Ubuntu 11
-set $term-font Ubuntu Mono 13
-
 set $color0  #2f2f2f
 set $color1  #1b1b1b
 set $color2  #3B758C
