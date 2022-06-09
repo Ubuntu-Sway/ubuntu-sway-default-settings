@@ -16,14 +16,14 @@ include /etc/sway/variables
 # User variables
 include $HOME/.config/sway/variables.d/*.conf
 
-include /etc/sway/outputs/*
-include /etc/sway/inputs/*
+include /etc/sway/outputs/*.conf
+include /etc/sway/inputs/*.conf
 
 # include modes
-include /etc/sway/modes/*
+include /etc/sway/modes/*.conf
 
 # Additional configs
-include /etc/sway/config.d/*
+include /etc/sway/config.d/*.conf
 
 # User config
 include $HOME/.config/sway/config.d/*.conf
