@@ -1,10 +1,10 @@
 @keyframes blink-warning {
     70% {
-        color: white;
+        color: @wm_icon_bg;
     }
     
     to {
-        color: white;
+        color: @wm_icon_bg;
         background-color: @warning_color;
     }
 }
@@ -39,6 +39,7 @@
 
 #window {
     margin-left: 10px;
+    color: @theme_fg_color;
 }
 
 window#waybar {

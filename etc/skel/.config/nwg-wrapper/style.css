@@ -1,6 +1,7 @@
 window {
 	background-color: rgba (47, 47, 47, 1.0);
 	font-size: medium;
+    color: white;
 }
 
 #box-outer {
