@@ -1,3 +1,30 @@
+ubuntusway-default-settings (1.27~jammy) jammy; urgency=medium
+
+  * Add workaround to running in QEMU/KVM
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 10 Jun 2022 14:11:25 +0400
+
+ubuntusway-default-settings (1.26~jammy) jammy; urgency=medium
+
+  * Change Foot's font to Hack 10
+  * Add basic mimelist
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 10 Jun 2022 13:05:08 +0400
+
+ubuntusway-default-settings (1.25~jammy) jammy; urgency=medium
+
+  * Change Foot's font to Hack 10
+  * Add basic mimelist
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 10 Jun 2022 13:02:56 +0400
+
+ubuntusway-default-settings (1.24~jammy) jammy; urgency=medium
+
+  * Change Foot's font to Hack 10
+  * Add basic mimelist
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 10 Jun 2022 13:00:20 +0400
+
 ubuntusway-default-settings (1.22~jammy) jammy; urgency=medium
 
   * Switch to lxpolkit
