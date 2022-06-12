@@ -18,7 +18,7 @@ countdown() {
 notify() {
     line=$1
     shift
-    notify-send "Recording" "${line}" -i /usr/share/icons/breeze-dark/devices/22/camera-video.svg $*;
+    notify-send "Recording" "${line}" -i /usr/share/icons/Yaru/scalable/devices/camera-video-symbolic.svg $*;
 }
 
 if [ $status != 0 ]
