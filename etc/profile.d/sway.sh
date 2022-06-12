@@ -1,4 +1,4 @@
-#Set XDG_CURRENT_DESKTOP to Sway (for screencasting and screensharing capabilities)
+# Set XDG_CURRENT_DESKTOP to Sway (for screencasting and screensharing capabilities)
 export XDG_CURRENT_DESKTOP=sway
 
 # Force Wayland for Mozilla Firefox
@@ -14,10 +14,10 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export ECORE_EVAS_ENGINE="wayland-egl"
 export ELM_ACCEL="gl"
 
-#Java XWayland blank screens fix
+# Java XWayland blank screens fix
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-#Check if system is running in virtual machine
+# Check if system is running in virtual machine
 case "$(systemd-detect-virt)" in
    kvm | qemu)
    export WLR_RENDERER=pixman
