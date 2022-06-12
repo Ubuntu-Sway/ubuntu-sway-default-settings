@@ -10,6 +10,10 @@ export GTK_CSD=0
 export QT_QPA_PLATFORM="wayland"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+# Force Wayland for EFL (Enlightenment) apps
+export ECORE_EVAS_ENGINE="wayland-egl"
+export ELM_ACCEL="gl"
+
 #Java XWayland blank screens fix
 export _JAVA_AWT_WM_NONREPARENTING=1
 
