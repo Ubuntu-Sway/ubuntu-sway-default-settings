@@ -1,10 +1,10 @@
 @keyframes blink-warning {
     70% {
-        color: white;
+        color: @wm_icon_bg;
     }
     
     to {
-        color: white;
+        color: @wm_icon_bg;
         background-color: @warning_color;
     }
 }
@@ -172,8 +172,8 @@ label:focus {
 }
 
 #network.disconnected {
-    background: @theme_selected_fg_color;
-    color: #000000
+    background: @theme_bg_color;
+    color: @wm_icon_bg
 }
 
 #pulseaudio {
@@ -182,8 +182,8 @@ label:focus {
 }
 
 #pulseaudio.muted {
-    background: @theme_selected_fg_color;
-    color: #000000;
+    background: @theme_bg_color;
+    color: @wm_icon_bg;
 }
 
 #custom-wf-recorder {
