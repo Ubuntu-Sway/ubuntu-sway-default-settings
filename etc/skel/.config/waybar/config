@@ -103,7 +103,8 @@
     
     "clock": {
         "format": "{:%e %b %H:%M}",
-        "tooltip": false,
+        "tooltip": true,
+        "tooltip-format": "{:%d.%m.%Y %H:%M}",
         "interval": 5,
         "on-click": "swaymsg exec \\$calendar"
     },
