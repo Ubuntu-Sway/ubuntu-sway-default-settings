@@ -71,8 +71,8 @@
     },
 
     "pulseaudio": {
-       "format": "{icon} {volume}%{format_source}",
-       "format-bluetooth": "{volume}% {icon}",
+       "format": "{icon}  {volume}% {format_source}",
+       "format-bluetooth": "{icon} {volume}%",
        "format-muted": " {format_source}",
        "format-source": "  {volume}%",
        "format-source-muted": "",
@@ -80,7 +80,7 @@
            "headphone": "",
            "default": ["", "", ""]
        },
-       "tooltip-format": "{icon} {volume}% {format_source}",
+       "tooltip-format": "{icon}  {volume}% {format_source}",
        "on-click": "swaymsg exec \\$pulseaudio",
        "on-click-middle": "swaymsg exec \\$volume_mute",
        "on-click-right": "swaymsg exec pavucontrol",
@@ -89,12 +89,12 @@
     },
     
     "battery": {
-        "format": "{capacity}% {icon}",
+        "format": "{icon} {capacity}%",
         "format-icons": ["", "", "", "", ""]
     },
     
     "network": {
-       "format-wifi": "",
+       "format-wifi": " ({signalStrength}%)",
        "format-ethernet": "",
        "format-disconnected": "",
        "tooltip-format": "{ifname} ({essid}): {ipaddr}",

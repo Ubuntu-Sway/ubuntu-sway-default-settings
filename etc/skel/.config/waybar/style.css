@@ -1,10 +1,10 @@
 @keyframes blink-warning {
     70% {
-        color: @wm_icon_bg;
+        color: white;
     }
     
     to {
-        color: @wm_icon_bg;
+        color: white;
         background-color: @warning_color;
     }
 }
@@ -33,13 +33,12 @@
 #waybar {
     background: @theme_bg_color;
     color: @wm_icon_bg;
-    font-family: Ubuntu, Noto Sans, sans-serif;
+    font-family: Ubuntu;
     font-size: 14px;
 }
 
 #window {
     margin-left: 10px;
-    color: @theme_fg_color;
 }
 
 window#waybar {
@@ -55,7 +54,7 @@ window#waybar.hidden {
     /* To compensate for the top border and still have vertical centering */
     padding: 0 0.5em;
     margin: 4px 3px;
-    color: @theme_selected_bg_color;
+    color: @wm_icon_bg;
 }
 
 #workspaces button.focused {
