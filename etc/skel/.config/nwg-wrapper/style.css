@@ -1,7 +1,6 @@
 window {
 	background-color: rgba (47, 47, 47, 1.0);
 	font-size: medium;
-    color: white;
 }
 
 #box-outer {
@@ -11,9 +10,9 @@ window {
 
 #box-inner {
 	background-color: rgba (23, 53, 63, 0.0);
-	border-radius: 5px;
+	border-radius: 0px;
 	border-style: solid;
-	border-width: 3px;
+	border-width: 2px;
 	border-color: rgba (49, 123, 121, 1.0);
 	padding: 10px;
 }
