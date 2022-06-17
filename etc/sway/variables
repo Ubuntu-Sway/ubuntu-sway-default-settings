@@ -10,9 +10,9 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term foot
-set $term_float footclient -a floating_shell
-set $term_float_portrait footclient -a floating_shell_portrait
+set $term kitty
+set $term_float kitty --class=floating_shell
+set $term_float_portrait --class=floating_shell_portrait
 
 # wofi theme
 set $wofi_theme "* {lightbg: $background-color; background: $background-color; lightfg: $accent-color;}"
