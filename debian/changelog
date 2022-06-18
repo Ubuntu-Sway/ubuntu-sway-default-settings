@@ -1,3 +1,15 @@
+ubuntusway-default-settings (1.30~jammy) jammy; urgency=medium
+
+  * Back to Foot as default terminal emulator
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 18 Jun 2022 21:22:35 +0400
+
+ubuntusway-default-settings (1.29~jammy) jammy; urgency=medium
+
+  * Switch to Kitty
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 17 Jun 2022 23:44:24 +0400
+
 ubuntusway-default-settings (1.27~jammy) jammy; urgency=medium
 
   * Add workaround to running in QEMU/KVM
