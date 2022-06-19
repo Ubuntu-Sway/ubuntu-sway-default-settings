@@ -1,5 +1,11 @@
 ubuntusway-default-settings (1.30~jammy) jammy; urgency=medium
 
+  * use posix compliant syntax in help.sh
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 19 Jun 2022 14:24:22 +0400
+
+ubuntusway-default-settings (1.30~jammy) jammy; urgency=medium
+
   * Back to Foot as default terminal emulator
 
  -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 18 Jun 2022 21:22:35 +0400
