@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.32~jammy) jammy; urgency=medium
+
+  * Fix Foot config
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 20 Jun 2022 23:23:50 +0400
+
 ubuntusway-default-settings (1.30~jammy) jammy; urgency=medium
 
   * use posix compliant syntax in help.sh
