@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.33~jammy) jammy; urgency=medium
+
+  * waybar: add wlogout module
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 21 Jun 2022 18:09:01 +0400
+
 ubuntusway-default-settings (1.32~jammy) jammy; urgency=medium
 
   * Fix Foot config
