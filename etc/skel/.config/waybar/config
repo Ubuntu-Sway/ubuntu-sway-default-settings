@@ -17,6 +17,7 @@
         "network",
         "pulseaudio",
         "clock",
+        "custom/power",
         "tray"
     ],
     
@@ -156,6 +157,11 @@
         "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
         "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
         "signal": 5
+    },
+
+    "custom/power": {
+        "format": "",
+        "on-click": "wlogout -p layer-shell"
     },
     
     "custom/weather": {
