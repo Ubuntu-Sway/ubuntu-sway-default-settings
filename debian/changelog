@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.35~jammy) jammy; urgency=medium
+
+  * modes: replace swaynag with wlogout
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 22 Jun 2022 13:21:00 +0400
+
 ubuntusway-default-settings (1.34~jammy) jammy; urgency=medium
 
   * Move theme specific stuff to ubuntusway-artwork

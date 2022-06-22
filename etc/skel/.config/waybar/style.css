@@ -32,7 +32,7 @@
 /* The whole bar */
 #waybar {
     background: @theme_bg_color;
-    color: @wm_icon_bg;
+    color: @theme_fg_color;
     font-family: Ubuntu;
     font-size: 14px;
 }
