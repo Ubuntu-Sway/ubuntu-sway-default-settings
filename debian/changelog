@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.38~jammy) jammy; urgency=medium
+
+  * fix xdg-ubuntusway path
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 25 Jun 2022 00:11:13 +0400
+
 ubuntusway-default-settings (1.37~jammy) jammy; urgency=medium
 
   * Add xdg-ubuntusway directory and move some configs to it
