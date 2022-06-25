@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.41~jammy) jammy; urgency=medium
+
+  * Fix waybar run
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 26 Jun 2022 00:44:04 +0400
+
 ubuntusway-default-settings (1.40~jammy) jammy; urgency=medium
 
   * add new waybar command

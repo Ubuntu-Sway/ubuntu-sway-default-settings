@@ -12,4 +12,4 @@ if [ -f $USER_STYLE_PATH ]; then
     USER_STYLE=$USER_STYLE_PATH
 fi
 
-waybar -c ${USER_CONFIG:-"/etc/xdg/xdg-ubuntusway/waybar/config.jsonc"} -s ${USER_STYLE:-"/etc/xdg/xdg-ubuntusway/waybar/style.css"} & 
+waybar -c ${USER_CONFIG:-"/etc/xdg/xdg-ubuntusway/waybar/config.jsonrc"} -s ${USER_STYLE:-"/etc/xdg/xdg-ubuntusway/waybar/style.css"} & 
