@@ -1,5 +1,5 @@
 window {
-	background-color: rgba (47, 47, 47, 1.0);
+	background-color: @theme_bg_color;
 	font-size: medium;
 }
 
