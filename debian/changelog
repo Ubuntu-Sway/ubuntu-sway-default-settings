@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.42~jammy) jammy; urgency=medium
+
+  * Adjust libfm settings
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 26 Jun 2022 17:22:55 +0400
+
 ubuntusway-default-settings (1.41~jammy) jammy; urgency=medium
 
   * Fix waybar run
