@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.43~jammy) jammy; urgency=medium
+
+  * Drop apparmor workaround for Mako
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 26 Jun 2022 19:28:54 +0400
+
 ubuntusway-default-settings (1.42~jammy) jammy; urgency=medium
 
   * Adjust libfm settings
