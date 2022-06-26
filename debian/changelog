@@ -1,3 +1,10 @@
+ubuntusway-default-settings (1.44~jammy) jammy; urgency=medium
+
+  * Implement empty-workspace script from Manjaro Sway
+  * Fix nwg-wrapper helper script
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 26 Jun 2022 22:48:50 +0400
+
 ubuntusway-default-settings (1.43~jammy) jammy; urgency=medium
 
   * Drop apparmor workaround for Mako
