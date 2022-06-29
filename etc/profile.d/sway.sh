@@ -22,14 +22,14 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Check if system is running in virtual machine
 case "$(systemd-detect-virt)" in
-   kvm | qemu)
-   export WLR_RENDERER=pixman
-   export WLR_NO_HARDWARE_CURSORS=1
-   ;;
-   oracle)
-   export WLR_NO_HARDWARE_CURSORS=1
-   ;;
-   none)
-   echo "No VM is detected"
-   ;;
+kvm | qemu)
+  export WLR_RENDERER=pixman
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+oracle)
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+none)
+  echo "No VM is detected"
+  ;;
 esac

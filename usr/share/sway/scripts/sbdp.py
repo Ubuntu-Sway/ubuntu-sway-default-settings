@@ -14,7 +14,7 @@ else:
 def readFile(filePath):
     try:
         paths = glob.glob(filePath)
-    except:
+    except (Exception, IndexError):
         print("couldn't resolve glob:", filePath)
         paths = []
 
@@ -37,7 +37,7 @@ lines = readFile(rootPath)
 
 
 def findKeybindingForLine(lineNumber: int, lines: list[str]):
-    return lines[lineNumber+1].split(' ')[1]
+    return lines[lineNumber + 1].split(' ')[1]
 
 
 class DocsConfig:
@@ -51,12 +51,12 @@ def getDocsConfig(lines: list[str]):
     docsConfig: list[DocsConfig] = []
     for index, line in enumerate(lines):
         match = re.match(docsLineRegex, line)
-        if (match):
+        if match:
             config = DocsConfig()
             config.category = match.group('category')
             config.action = match.group('action')
             config.keybinding = match.group('keybinding')
-            if (config.keybinding == None):
+            if config.keybinding is None:
                 config.keybinding = findKeybindingForLine(index, lines)
             docsConfig = docsConfig + [config]
     return docsConfig
@@ -67,8 +67,8 @@ def getSymbolDict(lines: list[str]):
     dictionary = {}
     for line in lines:
         match = re.match(setRegex, line)
-        if (match):
-            if (match.group('variable')):
+        if match:
+            if match.group('variable'):
                 dictionary[match.group('variable')] = match.group('value')
     return dict(dictionary)
 
@@ -98,7 +98,7 @@ translations = {
 def translate(word: Text, dictionary: dict):
     try:
         return dictionary[word.strip()]
-    except:
+    except KeyError:
         return word.strip()
 
 
