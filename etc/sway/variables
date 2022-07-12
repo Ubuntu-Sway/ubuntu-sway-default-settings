@@ -32,9 +32,9 @@ set $brightness_up light -r -A $($brightness_step) && $onscreen_bar $(light -G |
 set $brightness_down light -r -U $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
 
 # Volume controll
-set $volume_down pulsemixer --change-volume -5 && $onscreen_bar $(pulsemixer --get-volume)
-set $volume_up pulsemixer --change-volume +5 && $onscreen_bar $(pulsemixer --get-volume)
-set $volume_mute pulsemixer --toggle-mute && $(pulsemixer --get-volume)
+bindsym XF86AudioRaiseVolume exec "pw-volume change +5%; pkill -RTMIN+8 waybar"
+bindsym XF86AudioLowerVolume exec "pw-volume change -5%; pkill -RTMIN+8 waybar"
+bindsym XF86AudioMute exec "pw-volume mute toggle; pkill -RTMIN+8 waybar"
 
 # clipboard history
 set $clipboard cliphist list | wofi -dmenu -p "Select item to copy" -lines 10 -width 35 -theme-str $wofi_theme | cliphist decode | wl-copy
