@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.46~kinetic) kinetic; urgency=medium
+
+  * Change theme path
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 01 Sep 2022 21:24:12 +0400
+
 ubuntusway-default-settings (1.44~jammy) jammy; urgency=medium
 
   * Implement empty-workspace script from Manjaro Sway

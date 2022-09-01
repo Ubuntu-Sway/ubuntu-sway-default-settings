@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 # Styles
-set $theme /usr/share/themes/yaru-sway
+set $theme /usr/share/ubuntusway/themes/yaru-sway
 
 # theme variables
 include $theme/variables
