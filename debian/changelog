@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.49~kinetic) kinetic; urgency=medium
+
+  * Disable hardware cursors on KVM
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 06 Sep 2022 18:57:58 +0400
+
 ubuntusway-default-settings (1.48~kinetic) kinetic; urgency=medium
 
   * Add ubuntusway-welcome to autostart
