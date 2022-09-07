@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.52~kinetic) kinetic; urgency=medium
+
+  * Fix autostart ubuntusway-welcome
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 07 Sep 2022 22:58:28 +0400
+
 ubuntusway-default-settings (1.51~kinetic) kinetic; urgency=medium
 
   * Shange calamares app_id to class (now it's running on Xwayland)
