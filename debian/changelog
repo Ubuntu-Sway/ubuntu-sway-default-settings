@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.50~kinetic) kinetic; urgency=medium
+
+  * Add more window rules
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 07 Sep 2022 10:52:50 +0400
+
 ubuntusway-default-settings (1.49~kinetic) kinetic; urgency=medium
 
   * Disable hardware cursors on KVM
