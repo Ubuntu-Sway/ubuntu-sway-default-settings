@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.51~kinetic) kinetic; urgency=medium
+
+  * Shange calamares app_id to class (now it's running on Xwayland)
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 07 Sep 2022 11:23:06 +0400
+
 ubuntusway-default-settings (1.50~kinetic) kinetic; urgency=medium
 
   * Add more window rules
