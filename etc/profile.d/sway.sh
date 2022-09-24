@@ -32,7 +32,4 @@ kvm)
 oracle)
   export WLR_NO_HARDWARE_CURSORS=1
   ;;
-none)
-  echo "No VM is detected"
-  ;;
 esac
