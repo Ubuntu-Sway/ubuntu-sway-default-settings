@@ -1,3 +1,10 @@
+ubuntusway-default-settings (1.53~kinetic) kinetic; urgency=medium
+
+  * Prevent Chrome apps from inhibit shortcuts
+  * Remove 'No VM is detected' warning
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 25 Sep 2022 22:38:37 +0400
+
 ubuntusway-default-settings (1.52~kinetic) kinetic; urgency=medium
 
   * Fix autostart ubuntusway-welcome
