@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.56~kinetic) kinetic; urgency=medium
+
+  * Change cursor theme to Yaru
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 03 Oct 2022 18:57:11 +0400
+
 ubuntusway-default-settings (1.55~kinetic) kinetic; urgency=medium
 
   * Change default wallpaper to Kudu
