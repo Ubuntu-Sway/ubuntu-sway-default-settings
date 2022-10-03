@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.55~kinetic) kinetic; urgency=medium
+
+  * Change default wallpaper to Kudu
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 03 Oct 2022 17:27:48 +0400
+
 ubuntusway-default-settings (1.54~kinetic) kinetic; urgency=medium
 
   * Add Flashfocus
