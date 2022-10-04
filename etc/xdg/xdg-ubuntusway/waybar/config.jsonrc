@@ -122,7 +122,7 @@
     
     "memory": {
         "interval": 30,
-        "format": " {}%",
+        "format": " {}%",
         "states": {
           "warning": 70,
           "critical": 90

@@ -33,7 +33,7 @@
 #waybar {
     background: @theme_bg_color;
     color: @theme_fg_color;
-    font-family: "Ubuntu", "Font Awesome";
+    font-family: "Ubuntu", "Font Awesome 6 Free", "Font Awesome";
     font-size: 14px;
 }
 

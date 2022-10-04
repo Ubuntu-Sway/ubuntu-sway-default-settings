@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.57~kinetic) kinetic; urgency=medium
+
+  * Add autoname-workspaces.py script
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 04 Oct 2022 19:13:56 +0400
+
 ubuntusway-default-settings (1.56~kinetic) kinetic; urgency=medium
 
   * Change cursor theme to Yaru
