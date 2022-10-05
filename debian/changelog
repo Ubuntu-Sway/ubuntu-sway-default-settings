@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.58~kinetic) kinetic; urgency=medium
+
+  * Fix cursor name
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 05 Oct 2022 10:32:41 +0400
+
 ubuntusway-default-settings (1.57~kinetic) kinetic; urgency=medium
 
   * Add autoname-workspaces.py script
