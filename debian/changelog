@@ -1,3 +1,16 @@
+ubuntusway-default-settings (1.60~kinetic) kinetic; urgency=medium
+
+  * Don't hide workspace number
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 06 Oct 2022 15:02:16 +0400
+
+ubuntusway-default-settings (1.59~kinetic) kinetic; urgency=medium
+
+  * Add more icons to autoname-workspaces
+  * Explicit set python3 in weather.py
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 06 Oct 2022 12:39:26 +0400
+
 ubuntusway-default-settings (1.58~kinetic) kinetic; urgency=medium
 
   * Fix cursor name

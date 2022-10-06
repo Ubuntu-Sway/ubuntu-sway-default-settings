@@ -23,8 +23,7 @@
     
     "sway/workspaces": {
          "disable-scroll": true,
-         "all-outputs": true,
-         "format": "{name}",
+         "all-outputs": true
     },
     
     "sway/language": {
