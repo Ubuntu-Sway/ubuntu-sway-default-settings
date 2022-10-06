@@ -52,6 +52,9 @@ WINDOW_ICONS = {
     "simple-scan": "",
     "gpk-application": "",
     "sway-input-config": "",
+    "software-properties-gtk": "",
+    "mate-calc": "",
+    "pavucontrol": ""
 }
 
 DEFAULT_ICON = ""
