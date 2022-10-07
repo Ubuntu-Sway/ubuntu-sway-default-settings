@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.61~kinetic) kinetic; urgency=medium
+
+  * Don't hardcode Mako colors
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 07 Oct 2022 11:18:23 +0400
+
 ubuntusway-default-settings (1.60~kinetic) kinetic; urgency=medium
 
   * Don't hide workspace number
