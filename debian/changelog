@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.62~kinetic) kinetic; urgency=medium
+
+  * Fix wallpaper name
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 08 Oct 2022 10:43:32 +0400
+
 ubuntusway-default-settings (1.61~kinetic) kinetic; urgency=medium
 
   * Don't hardcode Mako colors
