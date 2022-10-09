@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.63~kinetic) kinetic; urgency=medium
+
+  * Add sway-unsupported.desktop
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 09 Oct 2022 17:02:32 +0400
+
 ubuntusway-default-settings (1.62~kinetic) kinetic; urgency=medium
 
   * Fix wallpaper name
