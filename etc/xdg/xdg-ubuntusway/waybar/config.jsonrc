@@ -15,6 +15,7 @@
         "memory",
         "battery",
         "network",
+        "bluetooth",
         "pulseaudio",
         "clock",
         "custom/power",
@@ -99,6 +100,14 @@
        "format-disconnected": "",
        "tooltip-format": "{ifname} ({essid}): {ipaddr}",
        "on-click": "swaymsg exec \\$term_float nmtui"
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "",
+        "on-click": "swaymsg exec \\$rofi_bluetooth",
+        "on-click-right": "rfkill toggle bluetooth",
+        "tooltip-format": "{}"
     },
     
     "clock": {

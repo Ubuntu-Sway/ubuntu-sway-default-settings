@@ -1,3 +1,11 @@
+ubuntusway-default-settings (1.64~kinetic) kinetic; urgency=medium
+
+  * Add lximage-qt config
+  * Switch to rofi-wayland
+  * Add rofi-bluetooth
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 12:13:32 +0400
+
 ubuntusway-default-settings (1.63~kinetic) kinetic; urgency=medium
 
   * Add sway-unsupported.desktop
