@@ -1,3 +1,11 @@
+ubuntusway-default-settings (1.68~kinetic) kinetic; urgency=medium
+
+  * Change Mako config to allow user's override
+  * Fix Mako dnd icons for Waybar
+  * Set $term-font and $gui-font from theme variables
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 23:26:17 +0400
+
 ubuntusway-default-settings (1.67~kinetic) kinetic; urgency=medium
 
   * Add "do-not-disturb" mode to Mako
