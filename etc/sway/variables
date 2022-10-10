@@ -37,8 +37,8 @@ set $volume_up pulsemixer --change-volume +5 && $onscreen_bar $(pulsemixer --get
 set $volume_mute pulsemixer --toggle-mute && $(pulsemixer --get-volume)
 
 # clipboard history
-set $clipboard cliphist list | wofi -dmenu -p "Select item to copy" -lines 10 -width 35 -theme-str $wofi_theme | cliphist decode | wl-copy
-set $clipboard-del cliphist list | wofi -dmenu -p "Select item to delete" -lines 10 -width 35 -theme-str $wofi_theme | cliphist delete
+set $clipboard cliphist list | rofi -dmenu -p "Select item to copy" -lines 10 -width 35 -theme-str $rofi_theme | cliphist decode | wl-copy
+set $clipboard-del cliphist list | rofi -dmenu -p "Select item to delete" -lines 10 -width 35 -theme-str $rofi_theme | cliphist delete
 
 # bluetooth menu
 set $rofi_bluetooth /usr/share/sway/scripts/rofi-bluetooth.sh $rofi_theme
