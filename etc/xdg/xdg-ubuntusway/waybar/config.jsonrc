@@ -103,7 +103,7 @@
     },
 
     "bluetooth": {
-        "format": "",
+        "format": "",
         "format-disabled": "",
         "on-click": "swaymsg exec \\$rofi_bluetooth",
         "on-click-right": "rfkill toggle bluetooth",

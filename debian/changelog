@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.65~kinetic) kinetic; urgency=medium
+
+  * Style fixes
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 17:02:29 +0400
+
 ubuntusway-default-settings (1.64~kinetic) kinetic; urgency=medium
 
   * Add lximage-qt config
