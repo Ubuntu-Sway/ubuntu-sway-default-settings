@@ -78,6 +78,7 @@ window#waybar.hidden {
 #custom-weather,
 #custom-clipboard,
 #custom-menu,
+#custom-dnd,
 #battery,
 #cpu,
 #language,
@@ -119,6 +120,11 @@ window#waybar.hidden {
 }
 
 #custom-menu {
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+#custom-dnd {
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }

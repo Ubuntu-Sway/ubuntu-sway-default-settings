@@ -12,3 +12,6 @@ margin=20
 padding=20
 width=500
 height=200
+
+[mode=do-not-disturb]
+invisible=1

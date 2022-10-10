@@ -9,6 +9,7 @@
         "custom/weather",
         "custom/playerctl",
         "idle_inhibitor",
+        "custom/dnd",
         "sway/language",
         "custom/clipboard",
         "cpu",
@@ -170,6 +171,19 @@
     "custom/power": {
         "format": "",
         "on-click": "wlogout -p layer-shell"
+    },
+
+    "custom/dnd": {
+        "interval": "once",
+        "return-type": "json",
+        "format": "{}{icon}",
+        "format-icons": {
+            "default": "",
+            "dnd": ""
+        },
+        "on-click": "makoctl mode | grep 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb; pkill -RTMIN+11 waybar",
+        "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
+        "signal": 11
     },
     
     "custom/weather": {

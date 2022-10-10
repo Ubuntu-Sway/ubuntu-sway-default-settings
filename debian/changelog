@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.67~kinetic) kinetic; urgency=medium
+
+  * Add "do-not-disturb" mode to Mako
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 18:54:27 +0400
+
 ubuntusway-default-settings (1.66~kinetic) kinetic; urgency=medium
 
   * Fix clipboard manager
