@@ -1,3 +1,10 @@
+ubuntusway-default-settings (1.69~kinetic) kinetic; urgency=medium
+
+  * Switch to workspace after moving container
+  * Remove unused chromium flags
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 11 Oct 2022 21:07:18 +0400
+
 ubuntusway-default-settings (1.68~kinetic) kinetic; urgency=medium
 
   * Change Mako config to allow user's override
