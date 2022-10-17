@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.71~kinetic) kinetic; urgency=medium
+
+  * Add new wallpapers
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 17 Oct 2022 19:25:34 +0400
+
 ubuntusway-default-settings (1.70~kinetic) kinetic; urgency=medium
 
   * Adjust foot.init
