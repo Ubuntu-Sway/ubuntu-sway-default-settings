@@ -170,7 +170,7 @@
 
     "custom/power": {
         "format": "",
-        "on-click": "wlogout -p layer-shell"
+        "on-click": "nwg-bar -x"
     },
 
     "custom/dnd": {

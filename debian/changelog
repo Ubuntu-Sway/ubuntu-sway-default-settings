@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.72~kinetic) kinetic; urgency=medium
+
+  * Switch from wlogout to nwg-bar
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 19 Oct 2022 23:28:53 +0400
+
 ubuntusway-default-settings (1.71~kinetic) kinetic; urgency=medium
 
   * Add new wallpapers
