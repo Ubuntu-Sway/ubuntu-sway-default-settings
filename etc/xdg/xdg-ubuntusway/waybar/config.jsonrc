@@ -71,23 +71,18 @@
         }
     },
 
-    "pulseaudio": {
-       "format": "{icon}  {volume}% {format_source}",
-       "format-bluetooth": "{icon} {volume}%",
-       "format-muted": " {format_source}",
-       "format-source": "  {volume}%",
-       "format-source-muted": "",
-       "format-icons": {
-           "headphone": "",
-           "default": ["", "", ""]
-       },
-       "tooltip-format": "{icon}  {volume}% {format_source}",
-       "on-click": "swaymsg exec \\$pulseaudio",
-       "on-click-middle": "swaymsg exec \\$volume_mute",
-       "on-click-right": "swaymsg exec pavucontrol",
-       "on-scroll-up": "swaymsg exec \\$volume_up",
-       "on-scroll-down": "swaymsg exec \\$volume_down"
+    "custom/pipewire": {
+    "exec": "pw-pipewire status",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 8,
+    "format": "{icon} {percentage}",
+    "format-icons": {
+        "mute": "",
+        "default": ["󰕿", "󰖀", "󰕾"]
+       }
     },
+
     
     "battery": {
         "format": "{icon} {capacity}%",
