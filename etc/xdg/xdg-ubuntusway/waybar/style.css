@@ -76,6 +76,7 @@ window#waybar.hidden {
 #custom-playerctl,
 #custom-power,
 #custom-weather,
+#custom-wlsunset,
 #custom-clipboard,
 #custom-menu,
 #custom-dnd,
@@ -100,6 +101,11 @@ window#waybar.hidden {
 }
 
 #custom-weather {
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+#custom-wlsunset {
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
