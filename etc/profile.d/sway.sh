@@ -7,7 +7,6 @@ export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntusway:/etc/xdg
 # Force Wayland for Mozilla Firefox
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_DBUS_REMOTE=1
-export GTK_CSD=0
 
 # Force Wayland for Qt apps
 export QT_QPA_PLATFORM="wayland"
