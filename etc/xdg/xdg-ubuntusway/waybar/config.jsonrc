@@ -81,6 +81,7 @@
        "format-source-muted": "",
        "format-icons": {
            "headphone": "",
+           "headset": "",
            "default": ["", "", ""]
        },
        "tooltip-format": "{icon}  {volume}% {format_source}",
