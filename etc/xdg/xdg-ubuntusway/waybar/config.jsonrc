@@ -15,6 +15,7 @@
         "custom/clipboard",
         "cpu",
         "memory",
+        "temperature",
         "battery",
         "network",
         "bluetooth",
@@ -140,6 +141,15 @@
         },
     "on-click": "swaymsg exec \\$term_float htop"
     
+    },
+
+    "temperature": {
+        "critical-threshold": 90,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "tooltip": false,
+        "on-click": "swaymsg exec \"\\$term_float watch sensors\""
     },
     
     "custom/wf-recorder": {
