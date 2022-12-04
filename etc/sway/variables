@@ -59,7 +59,7 @@ set $idle swayidle -w \
     timeout $idle_timeout 'light -G > /tmp/brightness && light -S 10' resume 'light -S $([ -f /tmp/brightness ] && cat /tmp/brightness || echo 100%)' \
     timeout $locking_timeout $lock \
     timeout $screen_timeout 'swaymsg "output * power off"' \
-    resume 'swaymsg "output * dpms on"' \
+    resume 'swaymsg "output * power on"' \
     before-sleep 'playerctl pause' \
     before-sleep $lock & \
     lock $lock &
