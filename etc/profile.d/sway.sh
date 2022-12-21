@@ -34,9 +34,7 @@ oracle)
 esac
 
 # Apply Nvidia-specific variables
-CHK_DRV=$(lspci -k | grep -A 2 -i "VGA" | awk 'NR==3' | awk -F: '{ print $2 }' | sed 's/^[ \t]*//g')
-
-if [ "$CHK_DRV" = "nvidia" ]; then
+if [ -d /sys/module/nvidia ]; then
     export WLR_NO_HARDWARE_CURSORS=1
     export GBM_BACKEND=nvidia-drm
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
