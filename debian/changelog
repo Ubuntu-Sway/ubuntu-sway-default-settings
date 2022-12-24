@@ -1,3 +1,10 @@
+ubuntusway-default-settings (1.75~kinetic) kinetic; urgency=medium
+
+  * waybar.sh: fix typo
+  * waybar: set correct includes
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 24 Dec 2022 16:11:21 +0400
+
 ubuntusway-default-settings (1.74~kinetic) kinetic; urgency=medium
 
   * Set Breeze cursor theme by default

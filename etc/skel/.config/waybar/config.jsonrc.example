@@ -1,5 +1,5 @@
 {
     "include": [
-        "/usr/share/sway/templates/waybar/config.jsonc"
+        "/etc/xdg/xdg-ubuntusway/waybar/config.jsonrc"
     ]
 }
