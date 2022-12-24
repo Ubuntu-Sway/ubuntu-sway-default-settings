@@ -1,3 +1,10 @@
+ubuntusway-default-settings (1.47~jammy) jammy; urgency=medium
+
+  * waybar.sh: fix typo
+  * waybar: set correct includes
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 24 Dec 2022 16:06:14 +0400
+
 ubuntusway-default-settings (1.44~jammy) jammy; urgency=medium
 
   * Implement empty-workspace script from Manjaro Sway
