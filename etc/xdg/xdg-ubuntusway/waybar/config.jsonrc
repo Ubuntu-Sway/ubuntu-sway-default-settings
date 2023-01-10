@@ -71,7 +71,10 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        }
+        },
+        "tooltip": true,
+        "tooltip-format-activated": "power-saving disabled",
+        "tooltip-format-deactivated": "power-saving enabled"
     },
 
     "pulseaudio": {
