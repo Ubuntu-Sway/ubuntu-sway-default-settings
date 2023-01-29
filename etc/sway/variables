@@ -19,7 +19,7 @@ set $term_float_portrait footclient -a floating_shell_portrait
 set $rofi_theme "* {lightbg: $background-color; background: $background-color; lightfg: $accent-color; foreground: $text-color;}"
 
 # Your preferred application launcher
-set $menu rofi -show combi -combi-modi "drun,run" -terminal $term -ssh-command "{terminal} {ssh-client} {host} [-p {port}]" -run-shell-command "{terminal} {cmd}" -show-icons -font "$gui-font" -lines 10 -width 35 -theme-str $rofi_theme
+set $menu rofi -show combi -combi-modi "drun,run" -terminal $term -ssh-command "{terminal} {ssh-client} {host} [-p {port}]" -run-shell-command "{terminal} {cmd}" -show-icons -font "$gui-font" -lines 10 -width 35
 
 # Add --to-code to bindsym, support for non-latin layouts
 set $bindsym bindsym --to-code
@@ -38,14 +38,14 @@ set $volume_up pulsemixer --change-volume +5 && $onscreen_bar $(pulsemixer --get
 set $volume_mute pulsemixer --toggle-mute && $(pulsemixer --get-volume)
 
 # clipboard history
-set $clipboard cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to copy" -lines 10 -width 35 -theme-str $rofi_theme | cliphist decode | wl-copy
-set $clipboard-del cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to delete" -lines 10 -width 35 -theme-str $rofi_theme | cliphist delete
+set $clipboard cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to copy" -lines 10 -width 35 | cliphist decode | wl-copy
+set $clipboard-del cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to delete" -lines 10 -width 35 | cliphist delete
 
 # Notification daemon configuration
 set $notifications /usr/share/sway/scripts/mako.sh --font "$term-font" --text-color "$text-color" --border-color "$accent-color" --background-color "$background-color" --border-size 3 --width 500 --height 200 --padding 20 --margin 20 --default-timeout 15000
 
 # bluetooth menu
-set $rofi_bluetooth /usr/share/sway/scripts/rofi-bluetooth.sh $rofi_theme
+set $rofi_bluetooth /usr/share/sway/scripts/rofi-bluetooth.sh
 
 ### Idle configuration
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -139,3 +139,6 @@ set $spice_vdagent '[ -x "$(command -v spice-vdagent)" ] && spice-vdagent'
 
 # Start playerctl as daemon
 set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playerctl -a metadata --format \'{{status}} {{title}}\' --follow | while read line; do pkill -RTMIN+5 waybar; done'
+
+# Update Rofi theme based on $rofi_theme colors
+set $update_rofi_theme mkdir -p $HOME/.config/rofi/ && echo $rofi_theme > $HOME/.config/rofi/config.rasi

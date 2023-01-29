@@ -232,7 +232,7 @@ device_menu() {
     options="$connected\n$paired\n$trusted\n$divider\n$goback\nExit"
 
     # Open rofi menu, read chosen option
-    chosen="$(echo -e "$options" | rofi -dmenu -theme-str "$rofi_theme" -p "$device_name")"
+    chosen="$(echo -e "$options" | rofi -dmenu -p "$device_name")"
 
     # Match chosen option to command
     case $chosen in
@@ -303,9 +303,6 @@ show_menu() {
             ;;
     esac
 }
-
-# Rofi theme to be overridden
-rofi_theme=${1:-"* {}"}
 
 case "$1" in
     --status)
