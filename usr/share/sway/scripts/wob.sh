@@ -16,11 +16,21 @@ new_value=$3 # null or a percent; no checking!!
 
 wob_pipe=~/.cache/$(basename $SWAYSOCK).wob
 
+ini=~/.config/wob.ini
+
+if [ ! -f "$ini" ]; then
+    echo "anchor = top center" >>$ini
+    echo "margin = 20" >>$ini
+    echo "border_color = ${1:1}" >>$ini
+    echo "bar_color = ${1:1}" >>$ini
+    echo "background_color = ${2:1}" >>$ini
+fi
+
 [[ -p $wob_pipe ]] || mkfifo $wob_pipe
 
 # wob does not appear in $(swaymsg -t get_msg), so:
 is_running_on_this_screen wob || {
-  tail -f $wob_pipe | wob --bar-color $1 --border-color $1 --background-color $2 --anchor top --anchor center --margin 20 &
+  tail -f $wob_pipe | wob -c $ini &
 }
 
 [[ "$new_value" ]] && echo $new_value >$wob_pipe

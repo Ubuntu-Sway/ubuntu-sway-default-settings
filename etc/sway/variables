@@ -25,7 +25,7 @@ set $menu rofi -show combi -combi-modi "drun,run" -terminal $term -ssh-command "
 set $bindsym bindsym --to-code
 
 # Onscreen bar (WOB)
-set $onscreen_bar bash /usr/share/sway/scripts/wob.sh "$accent-colorFF" "$background-colorFF"
+set $onscreen_bar bash /usr/share/sway/scripts/wob.sh "$accent-color" "$background-color"
 
 # brightness control
 set $brightness_step bash -c 'echo $(( $(light -Mr) / 100 * 5 < 1 ? 1 : $(( $(light -Mr) / 100 * 5 )) ))'
