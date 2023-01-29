@@ -11,6 +11,7 @@ set $right l
 
 # Your preferred terminal emulator
 set $term foot
+set $term_server foot --server
 set $term_float footclient -a floating_shell
 set $term_float_portrait footclient -a floating_shell_portrait
 
@@ -71,6 +72,9 @@ set $pulseaudio $term_float pulsemixer
 set $calendar $term_float khal interactive
 
 # help overlay
+set $help_menu '[ -x "$(command -v nwg-wrapper)" ] && [ -f $HOME/.config/nwg-wrapper/help.sh ] && /usr/share/sway/scripts/help.sh'
+
+# help overlay command
 set $help /usr/share/sway/scripts/help.sh --toggle
 
 # workspace names
@@ -92,3 +96,46 @@ set $screenshot_screen_file $grimshot --notify save output
 set $screenshot_selection_clipboard $grimshot --notify copy window
 set $screenshot_selection_file $grimshot --notify save window
 set $screenshot_selection_active $grimshot --notify save active
+
+# PolicyKit agent
+set $polkit_agent /usr/bin/lxpolkit &
+
+# Night color
+set $wlsunset '[ -x "$(command -v wlsunset)" ] && /usr/share/sway/scripts/sunset.sh "on"'
+
+# Autotiling script
+set $autotiling '[ -x "$(command -v autotiling)" ] && autotiling -w 1 3 5 7 9'
+
+# Automatic workspace names
+set $autoname_workspaces '[ -f /usr/share/sway/scripts/autoname-workspaces.py ] && /usr/share/sway/scripts/autoname-workspaces.py'
+
+# restart kanshi https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
+set $kanshi '[ -x "$(command -v kanshi)" ] && pkill kanshi; exec kanshi'
+
+# Workaround for apply GTK theme
+set $import_gsettings '[ -f /usr/share/sway/scripts/import-gsettings.sh ] && /usr/share/sway/scripts/import-gsettings.sh'
+
+# Dex autostart daemon
+set $dex_autostart '[ -x "$(command -v dex)" ] && gdbus wait --session org.kde.StatusNotifierWatcher && dex --autostart'
+
+# Start PCmanFM as daemon
+set $pcmanfm_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
+
+# Swayr daemon
+set $swayr_daemon '[ -x "$(command -v swayrd)" ] && env RUST_BACKTRACE=1 RUST_LOG=swayr=debug swayrd &> /tmp/swayrd.log'
+
+# Power notifications daemon
+set $poweralertd '[ -x "$(command -v poweralertd)" ] && pkill poweralertd; poweralertd -s -i "line power" &'
+
+# Clipboard manager
+set $cliphist_store '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch cliphist store'
+set $cliphist_watch '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -RTMIN+9 waybar'
+
+# Start nwg-drawer as daemon
+set $nwg_drawer_daemon '[ -x "$(command -v nwg-drawer)" ] && nwg-drawer -r'
+
+# SPICE agent
+set $spice_vdagent '[ -x "$(command -v spice-vdagent)" ] && spice-vdagent'
+
+# Start playerctl as daemon
+set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playerctl -a metadata --format \'{{status}} {{title}}\' --follow | while read line; do pkill -RTMIN+5 waybar; done'
