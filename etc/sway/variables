@@ -69,7 +69,7 @@ set $idle swayidle -w \
 set $pulseaudio $term_float pulsemixer
 
 # calendar application
-set $calendar $term_float khal interactive
+set $calendar $term_float calcurse
 
 # help overlay
 set $help_menu '[ -x "$(command -v nwg-wrapper)" ] && [ -f $HOME/.config/nwg-wrapper/help.sh ] && /usr/share/sway/scripts/help.sh'
