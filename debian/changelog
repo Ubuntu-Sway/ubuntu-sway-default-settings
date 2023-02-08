@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.76~lunar) lunar; urgency=medium
+
+  * Adapt Rofi theme to system styling
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 08 Feb 2023 13:23:16 +0400
+
 ubuntusway-default-settings (1.75~lunar) lunar; urgency=medium
 
   * waybar: added wlsunset module
