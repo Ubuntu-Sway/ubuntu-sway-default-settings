@@ -142,3 +142,6 @@ set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playe
 
 # Update Rofi theme based on $rofi_theme colors
 set $update_rofi_theme mkdir -p $HOME/.config/rofi/ && echo $rofi_theme > $HOME/.config/rofi/config.rasi
+
+# Start Calcurse calendar as daemon
+set $calendar_daemon 'calcurse --daemon'
