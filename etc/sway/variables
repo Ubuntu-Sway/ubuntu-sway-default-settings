@@ -13,7 +13,6 @@ set $right l
 set $term foot
 set $term_server foot --server
 set $term_float footclient -a floating_shell
-set $term_float_portrait footclient -a floating_shell_portrait
 
 # rofi theme
 set $rofi_theme "* {lightbg: $background-color; background: $background-color; lightfg: $accent-color; foreground: $text-color; border-color: $accent-color;} window {border: 2;}"
