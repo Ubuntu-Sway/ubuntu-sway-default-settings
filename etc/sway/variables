@@ -11,6 +11,7 @@ set $right l
 
 # Your preferred terminal emulator
 set $term foot
+set $term_cwd $term -D "$(/usr/share/sway/scripts/swaycwd.sh 2>/dev/null || echo $HOME)"
 set $term_server foot --server
 set $term_float footclient -a floating_shell
 
