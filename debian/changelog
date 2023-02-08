@@ -1,3 +1,10 @@
+ubuntusway-default-settings (1.77~lunar) lunar; urgency=medium
+
+  * Add swaycwd for foot
+  * small fixes
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 08 Feb 2023 17:31:36 +0400
+
 ubuntusway-default-settings (1.76~lunar) lunar; urgency=medium
 
   * Adapt Rofi theme to system styling
