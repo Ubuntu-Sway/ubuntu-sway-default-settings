@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.78~lunar) lunar; urgency=medium
+
+  * Enable Lunar Lobster wallpaper
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 14 Feb 2023 16:08:53 +0400
+
 ubuntusway-default-settings (1.77~lunar) lunar; urgency=medium
 
   * Add swaycwd for foot
