@@ -39,3 +39,7 @@ if [ -d /sys/module/nvidia ]; then
     export GBM_BACKEND=nvidia-drm
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
 fi
+
+set -a
+source $HOME/.config/user-dirs.dirs
+set +a
