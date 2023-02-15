@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.79~lunar) lunar; urgency=medium
+
+  * Add Swappy
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 00:11:10 +0400
+
 ubuntusway-default-settings (1.78~lunar) lunar; urgency=medium
 
   * Enable Lunar Lobster wallpaper
