@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.81~lunar) lunar; urgency=medium
+
+  * Remove xdg-user dirs updater
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 13:59:43 +0400
+
 ubuntusway-default-settings (1.80~lunar) lunar; urgency=medium
 
   * Remove obsolete env

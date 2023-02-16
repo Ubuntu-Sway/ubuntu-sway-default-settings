@@ -159,6 +159,3 @@ set $calendar_daemon 'calcurse --daemon'
 
 # Notifications from Swappy
 set $swappy_notify '[ -x "$(command -v swappy)" ] && /usr/share/sway/scripts/screenshot-notify.sh'
-
-# Update xdg user dirs
-set $xdg-dirs '[ -x "$(command -v xdg-user-dirs-update)" ] && exec xdg-user-dirs-update'
