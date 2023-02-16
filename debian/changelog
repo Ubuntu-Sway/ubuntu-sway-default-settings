@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.82~lunar) lunar; urgency=medium
+
+  * Fix some icons in waybar
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 17:21:39 +0400
+
 ubuntusway-default-settings (1.81~lunar) lunar; urgency=medium
 
   * Remove xdg-user dirs updater
