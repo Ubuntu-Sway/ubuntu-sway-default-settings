@@ -207,6 +207,11 @@ label:focus {
     color: @theme_selected_fg_color;
 }
 
+#bluetooth.disabled {
+    background: @theme_bg_color;
+    color: @wm_icon_bg;
+}
+
 #network.disconnected {
     background: @theme_bg_color;
     color: @wm_icon_bg
