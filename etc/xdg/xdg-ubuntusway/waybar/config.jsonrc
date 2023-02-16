@@ -238,8 +238,8 @@
         "return-type": "json",
         "format": "{icon}",
         "format-icons": {
-            "on": "",
-            "off": ""
+            "on": "",
+            "off": ""
         },
         "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
@@ -252,8 +252,8 @@
         "return-type": "json",
         "format": "{icon}",
         "format-icons": {
-            "one": "类",
-            "many": "缾"
+            "one": "",
+            "many": ""
         },
         "exec": "/bin/bash /usr/share/sway/scripts/scratchpad.sh; pkill -RTMIN+7 waybar",
         "on-click": "swaymsg 'scratchpad show'",
