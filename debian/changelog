@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.85~lunar) lunar; urgency=medium
+
+  * Set dark GTK color scheme in import-gsettings
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 19 Feb 2023 17:32:15 +0400
+
 ubuntusway-default-settings (1.84~lunar) lunar; urgency=medium
 
   * Set correct icons for wlsunset modes
