@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.84~lunar) lunar; urgency=medium
+
+  * Set correct icons for wlsunset modes
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 19 Feb 2023 17:14:01 +0400
+
 ubuntusway-default-settings (1.83~lunar) lunar; urgency=medium
 
   * Temporary remove screenshot upload command
