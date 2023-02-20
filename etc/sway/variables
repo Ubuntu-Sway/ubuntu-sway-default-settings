@@ -94,9 +94,8 @@ set $grimshot /usr/bin/grimshot
 set $pipe_output $grimshot save output -
 set $pipe_selection $grimshot save window -
 set $pipe_active $grimshot save active -
-set $notify_paste  [[ $(wl-paste -l) == "image/png" ]] && notify-send "Screenshot copied to clipboard"
+set $notify_paste bash -c '[[ $(wl-paste -l) == "image/png" ]] && notify-send "Screenshot copied to clipboard"'
 set $swappy swappy -f -
-set $swappy_pipe swappy -f - -o -
 
 set $screenshot_screen $pipe_output | $swappy && $notify_paste
 set $screenshot_selection $pipe_selection | $swappy && $notify_paste
