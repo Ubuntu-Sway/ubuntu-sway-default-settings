@@ -1,3 +1,11 @@
+ubuntusway-default-settings (1.86~lunar) lunar; urgency=medium
+
+  * Add initial qt6ct config
+  * Add initial touchpad-gestures config
+  * Fix screenshot notification when copying to clipboard
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 20 Feb 2023 18:37:30 +0400
+
 ubuntusway-default-settings (1.85~lunar) lunar; urgency=medium
 
   * Set dark GTK color scheme in import-gsettings
