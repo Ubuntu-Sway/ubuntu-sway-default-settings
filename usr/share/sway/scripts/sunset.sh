@@ -16,16 +16,16 @@ function start() {
         if [[ -z ${longitude+x} ]] || [[ -z ${latitude+x} ]]; then
             GEO_CONTENT=$(curl -sL https://freegeoip.live/json/)
         fi
-        longitude=${longitude:-$(echo $GEO_CONTENT | jq '.longitude // empty')}
+        longitude=${longitude:-$(echo "$GEO_CONTENT" | jq '.longitude // empty')}
         longitude=${longitude:-$fallback_longitude}
-        latitude=${latitude:-$(echo $GEO_CONTENT | jq '.latitude // empty')}
+        latitude=${latitude:-$(echo "$GEO_CONTENT" | jq '.latitude // empty')}
         latitude=${latitude:-$fallback_latitude}
 
-        echo longitude: $longitude latitude: $latitude
+        echo longitude: "$longitude" latitude: "$latitude"
 
-        wlsunset -l $latitude -L $longitude -t $temp_low -T $temp_high -d $duration &
+        wlsunset -l "$latitude" -L "$longitude" -t "$temp_low" -T "$temp_high" -d "$duration" &
     else
-        wlsunset -t $temp_low -T $temp_high -d $duration -S $sunrise -s $sunset &
+        wlsunset -t "$temp_low" -T "$temp_high" -d "$duration" -S "$sunrise" -s "$sunset" &
     fi
 }
 

@@ -1,10 +1,8 @@
 #!/bin/bash
 set -x
 
-pid=$(pgrep wf-recorder)
+pgrep wf-recorder
 status=$?
-
-gif=false
 
 countdown() {
   notify "Recording in 3 seconds" -t 1000
@@ -18,7 +16,7 @@ countdown() {
 notify() {
   line=$1
   shift
-  notify-send "Recording" "${line}" -i /usr/share/icons/Yaru/scalable/devices/camera-video-symbolic.svg $*
+  notify-send "Recording" "${line}" -i /usr/share/icons/Yaru/scalable/devices/camera-video-symbolic.svg "$*"
 }
 
 if [ $status != 0 ]; then
