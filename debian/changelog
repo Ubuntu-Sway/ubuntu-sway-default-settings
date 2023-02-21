@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.87~lunar) lunar; urgency=medium
+
+  * Shellcheck'ing some scripts
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 21 Feb 2023 22:17:16 +0400
+
 ubuntusway-default-settings (1.86~lunar) lunar; urgency=medium
 
   * Add initial qt6ct config
