@@ -27,10 +27,13 @@ set $bindsym bindsym --to-code
 # Volume notification
 set $volume_bar /usr/share/sway/scripts/volume-notify.sh
 
+# Brightness notification
+set $brightness_bar /usr/share/sway/scripts/brightness-notify.sh
+
 # brightness control
 set $brightness_step bash -c 'echo $(( $(light -Mr) / 100 * 5 < 1 ? 1 : $(( $(light -Mr) / 100 * 5 )) ))'
-set $brightness_up light -r -A $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
-set $brightness_down light -r -U $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
+set $brightness_up light -r -A $($brightness_step) && $brightness_bar
+set $brightness_down light -r -U $($brightness_step) && $brightness_bar
 
 # Volume control
 set $volume_down pactl set-sink-volume @DEFAULT_SINK@ -5% && $volume_bar
