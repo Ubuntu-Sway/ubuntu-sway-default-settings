@@ -1,3 +1,11 @@
+ubuntusway-default-settings (1.88~lunar) lunar; urgency=medium
+
+  * Replace Wob with custom notifications on notify-send
+    for volume and brightness changes
+  * Switch from Pulsemixer to pactl for volume control
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 22 Feb 2023 18:47:32 +0400
+
 ubuntusway-default-settings (1.87~lunar) lunar; urgency=medium
 
   * Shellcheck'ing some scripts
