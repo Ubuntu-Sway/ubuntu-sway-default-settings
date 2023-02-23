@@ -131,18 +131,12 @@ set $pcmanfm_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
 # Swayr daemon
 set $swayr_daemon '[ -x "$(command -v swayrd)" ] && env RUST_BACKTRACE=1 RUST_LOG=swayr=debug swayrd &> /tmp/swayrd.log'
 
-# Power notifications daemon
-set $poweralertd '[ -x "$(command -v poweralertd)" ] && pkill poweralertd; poweralertd -s -i "line power" &'
-
 # Clipboard manager
 set $cliphist_store '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch cliphist store'
 set $cliphist_watch '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -RTMIN+9 waybar'
 
 # Start nwg-drawer as daemon
 set $nwg_drawer_daemon '[ -x "$(command -v nwg-drawer)" ] && nwg-drawer -r'
-
-# SPICE agent
-set $spice_vdagent '[ -x "$(command -v spice-vdagent)" ] && spice-vdagent'
 
 # Start playerctl as daemon
 set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playerctl -a metadata --format \'{{status}} {{title}}\' --follow | while read line; do pkill -RTMIN+5 waybar; done'

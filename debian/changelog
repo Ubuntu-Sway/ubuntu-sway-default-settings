@@ -1,287 +1,53 @@
-ubuntusway-default-settings (1.89~lunar) lunar; urgency=medium
-
-  * Remove wob script
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 23 Feb 2023 19:54:59 +0400
-
-ubuntusway-default-settings (1.88~lunar) lunar; urgency=medium
-
-  * Replace Wob with custom notifications on notify-send
-    for volume and brightness changes
-  * Switch from Pulsemixer to pactl for volume control
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 22 Feb 2023 18:47:32 +0400
-
-ubuntusway-default-settings (1.87~lunar) lunar; urgency=medium
-
-  * Shellcheck'ing some scripts
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 21 Feb 2023 22:17:16 +0400
-
-ubuntusway-default-settings (1.86~lunar) lunar; urgency=medium
-
-  * Add initial qt6ct config
-  * Add initial touchpad-gestures config
-  * Fix screenshot notification when copying to clipboard
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 20 Feb 2023 18:37:30 +0400
-
-ubuntusway-default-settings (1.85~lunar) lunar; urgency=medium
-
-  * Set dark GTK color scheme in import-gsettings
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 19 Feb 2023 17:32:15 +0400
-
-ubuntusway-default-settings (1.84~lunar) lunar; urgency=medium
-
-  * Set correct icons for wlsunset modes
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 19 Feb 2023 17:14:01 +0400
-
-ubuntusway-default-settings (1.83~lunar) lunar; urgency=medium
+ubuntusway-rpi-default-settings (1.53~lunar) lunar; urgency=medium
 
   * Temporary remove screenshot upload command
+  * Fix some icons on waybar
 
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 20:50:57 +0400
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 20:54:59 +0400
 
-ubuntusway-default-settings (1.82~lunar) lunar; urgency=medium
+ubuntusway-rpi-default-settings (1.52~lunar) lunar; urgency=medium
 
-  * Fix some icons in waybar
+  * Remove xdg use dirs updater
 
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 17:21:39 +0400
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 13:57:15 +0400
 
-ubuntusway-default-settings (1.81~lunar) lunar; urgency=medium
-
-  * Remove xdg-user dirs updater
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 13:59:43 +0400
-
-ubuntusway-default-settings (1.80~lunar) lunar; urgency=medium
+ubuntusway-rpi-default-settings (1.51~lunar) lunar; urgency=medium
 
   * Remove obsolete env
 
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 13:53:35 +0400
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 13:55:22 +0400
 
-ubuntusway-default-settings (1.79~lunar) lunar; urgency=medium
+ubuntusway-rpi-default-settings (1.50~lunar) lunar; urgency=medium
+
+  * Build only for arm64
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 00:22:45 +0400
+
+ubuntusway-rpi-default-settings (1.49~lunar) lunar; urgency=medium
 
   * Add Swappy
+  * Remove obsolete sway-unspupported-gpu desktop file
 
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 00:11:10 +0400
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 16 Feb 2023 00:16:43 +0400
 
-ubuntusway-default-settings (1.78~lunar) lunar; urgency=medium
+ubuntusway-rpi-default-settings (1.48~lunar) lunar; urgency=medium
 
   * Enable Lunar Lobster wallpaper
 
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 14 Feb 2023 16:08:53 +0400
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 14 Feb 2023 18:48:15 +0400
 
-ubuntusway-default-settings (1.77~lunar) lunar; urgency=medium
+ubuntusway-rpi-default-settings (1.47~lunar) lunar; urgency=medium
 
-  * Add swaycwd for foot
+  * Initial upload to Lunar
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 08 Feb 2023 18:25:10 +0400
+
+ubuntusway-rpi-default-settings (1.46~jammy) jammy; urgency=medium
+
+  * Run pcmanfm as daemon on starup
   * small fixes
 
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 08 Feb 2023 17:31:36 +0400
-
-ubuntusway-default-settings (1.76~lunar) lunar; urgency=medium
-
-  * Adapt Rofi theme to system styling
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 08 Feb 2023 13:23:16 +0400
-
-ubuntusway-default-settings (1.75~lunar) lunar; urgency=medium
-
-  * waybar: added wlsunset module
-  * waybar: added scratchpad module
-  * waybar: added temperature module
-  * apply Nvidia specific variables if nvidia driver is installed
-  * start PCmanFM as daemon on startup
-  * compatibility fixes for Sway 1.8
-  * added MPV config
-  * added Calcurse config
-  * added Swayr config and Alt-Tab functional
-  * Other fixes
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 29 Jan 2023 18:52:51 +0400
-
-ubuntusway-default-settings (1.74~kinetic) kinetic; urgency=medium
-
-  * Set Breeze cursor theme by default
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 29 Oct 2022 15:42:17 +0400
-
-ubuntusway-default-settings (1.73~kinetic) kinetic; urgency=medium
-
-  * Disable Flashfocus by default
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 27 Oct 2022 11:27:00 +0400
-
-ubuntusway-default-settings (1.72~kinetic) kinetic; urgency=medium
-
-  * Switch from wlogout to nwg-bar
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 19 Oct 2022 23:28:53 +0400
-
-ubuntusway-default-settings (1.71~kinetic) kinetic; urgency=medium
-
-  * Add new wallpapers
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 17 Oct 2022 19:25:34 +0400
-
-ubuntusway-default-settings (1.70~kinetic) kinetic; urgency=medium
-
-  * Adjust foot.init
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 17 Oct 2022 19:05:33 +0400
-
-ubuntusway-default-settings (1.69~kinetic) kinetic; urgency=medium
-
-  * Switch to workspace after moving container
-  * Remove unused chromium flags
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 11 Oct 2022 21:07:18 +0400
-
-ubuntusway-default-settings (1.68~kinetic) kinetic; urgency=medium
-
-  * Change Mako config to allow user's override
-  * Fix Mako dnd icons for Waybar
-  * Set $term-font and $gui-font from theme variables
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 23:26:17 +0400
-
-ubuntusway-default-settings (1.67~kinetic) kinetic; urgency=medium
-
-  * Add "do-not-disturb" mode to Mako
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 18:54:27 +0400
-
-ubuntusway-default-settings (1.66~kinetic) kinetic; urgency=medium
-
-  * Fix clipboard manager
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 18:29:01 +0400
-
-ubuntusway-default-settings (1.65~kinetic) kinetic; urgency=medium
-
-  * Style fixes
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 17:02:29 +0400
-
-ubuntusway-default-settings (1.64~kinetic) kinetic; urgency=medium
-
-  * Add lximage-qt config
-  * Switch to rofi-wayland
-  * Add rofi-bluetooth
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 10 Oct 2022 12:13:32 +0400
-
-ubuntusway-default-settings (1.63~kinetic) kinetic; urgency=medium
-
-  * Add sway-unsupported.desktop
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 09 Oct 2022 17:02:32 +0400
-
-ubuntusway-default-settings (1.62~kinetic) kinetic; urgency=medium
-
-  * Fix wallpaper name
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 08 Oct 2022 10:43:32 +0400
-
-ubuntusway-default-settings (1.61~kinetic) kinetic; urgency=medium
-
-  * Don't hardcode Mako colors
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 07 Oct 2022 11:18:23 +0400
-
-ubuntusway-default-settings (1.60~kinetic) kinetic; urgency=medium
-
-  * Don't hide workspace number
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 06 Oct 2022 15:02:16 +0400
-
-ubuntusway-default-settings (1.59~kinetic) kinetic; urgency=medium
-
-  * Add more icons to autoname-workspaces
-  * Explicit set python3 in weather.py
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 06 Oct 2022 12:39:26 +0400
-
-ubuntusway-default-settings (1.58~kinetic) kinetic; urgency=medium
-
-  * Fix cursor name
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 05 Oct 2022 10:32:41 +0400
-
-ubuntusway-default-settings (1.57~kinetic) kinetic; urgency=medium
-
-  * Add autoname-workspaces.py script
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 04 Oct 2022 19:13:56 +0400
-
-ubuntusway-default-settings (1.56~kinetic) kinetic; urgency=medium
-
-  * Change cursor theme to Yaru
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 03 Oct 2022 18:57:11 +0400
-
-ubuntusway-default-settings (1.55~kinetic) kinetic; urgency=medium
-
-  * Change default wallpaper to Kudu
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 03 Oct 2022 17:27:48 +0400
-
-ubuntusway-default-settings (1.54~kinetic) kinetic; urgency=medium
-
-  * Add Flashfocus
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 30 Sep 2022 11:56:55 +0400
-
-ubuntusway-default-settings (1.53~kinetic) kinetic; urgency=medium
-
-  * Prevent Chrome apps from inhibit shortcuts
-  * Remove 'No VM is detected' warning
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 25 Sep 2022 22:38:37 +0400
-
-ubuntusway-default-settings (1.52~kinetic) kinetic; urgency=medium
-
-  * Fix autostart ubuntusway-welcome
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 07 Sep 2022 22:58:28 +0400
-
-ubuntusway-default-settings (1.51~kinetic) kinetic; urgency=medium
-
-  * Shange calamares app_id to class (now it's running on Xwayland)
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 07 Sep 2022 11:23:06 +0400
-
-ubuntusway-default-settings (1.50~kinetic) kinetic; urgency=medium
-
-  * Add more window rules
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 07 Sep 2022 10:52:50 +0400
-
-ubuntusway-default-settings (1.49~kinetic) kinetic; urgency=medium
-
-  * Disable hardware cursors on KVM
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 06 Sep 2022 18:57:58 +0400
-
-ubuntusway-default-settings (1.48~kinetic) kinetic; urgency=medium
-
-  * Add ubuntusway-welcome to autostart
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 06 Sep 2022 18:49:23 +0400
-
-ubuntusway-default-settings (1.47~kinetic) kinetic; urgency=medium
-
-  * Fix foot config
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 06 Sep 2022 09:56:57 +0400
-
-ubuntusway-default-settings (1.46~kinetic) kinetic; urgency=medium
-
-  * Change theme path
-
- -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 01 Sep 2022 21:24:12 +0400
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 08 Feb 2023 17:57:35 +0400
 
 ubuntusway-default-settings (1.44~jammy) jammy; urgency=medium
 
