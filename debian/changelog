@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.89~lunar) lunar; urgency=medium
+
+  * Remove wob script
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 23 Feb 2023 19:54:59 +0400
+
 ubuntusway-default-settings (1.88~lunar) lunar; urgency=medium
 
   * Replace Wob with custom notifications on notify-send
