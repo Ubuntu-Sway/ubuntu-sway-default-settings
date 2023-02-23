@@ -11,44 +11,34 @@ set $right l
 
 # Your preferred terminal emulator
 set $term foot
-set $term_cwd $term -D "$(/usr/share/sway/scripts/swaycwd.sh 2>/dev/null || echo $HOME)"
-set $term_server foot --server
 set $term_float footclient -a floating_shell
+set $term_float_portrait footclient -a floating_shell_portrait
 
-# rofi theme
-set $rofi_theme "* {lightbg: $background-color; background: $background-color; lightfg: $accent-color; foreground: $text-color; border-color: $accent-color;} window {border: 2;}"
+# wofi theme
+set $wofi_theme "* {lightbg: $background-color; background: $background-color; lightfg: $accent-color;}"
 
 # Your preferred application launcher
-set $menu rofi -show combi -combi-modi "drun,run" -terminal $term -ssh-command "{terminal} {ssh-client} {host} [-p {port}]" -run-shell-command "{terminal} {cmd}" -show-icons -font "$gui-font"
+set $menu wofi --show drun --allow-images --allow-markup --hide-scroll --no-actions -theme-str $wofi_theme -lines 10 -width 35
 
 # Add --to-code to bindsym, support for non-latin layouts
 set $bindsym bindsym --to-code
 
-# Volume notification
-set $volume_bar /usr/share/sway/scripts/volume-notify.sh
-
-# Brightness notification
-set $brightness_bar /usr/share/sway/scripts/brightness-notify.sh
+# Onscreen bar (WOB)
+set $onscreen_bar bash /usr/share/sway/scripts/wob.sh "$accent-colorFF" "$background-colorFF"
 
 # brightness control
 set $brightness_step bash -c 'echo $(( $(light -Mr) / 100 * 5 < 1 ? 1 : $(( $(light -Mr) / 100 * 5 )) ))'
-set $brightness_up light -r -A $($brightness_step) && $brightness_bar
-set $brightness_down light -r -U $($brightness_step) && $brightness_bar
+set $brightness_up light -r -A $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
+set $brightness_down light -r -U $($brightness_step) && $onscreen_bar $(light -G | cut -d'.' -f1)
 
-# Volume control
-set $volume_down pactl set-sink-volume @DEFAULT_SINK@ -5% && $volume_bar
-set $volume_up pactl set-sink-volume @DEFAULT_SINK@ +5% && $volume_bar
-set $volume_mute pactl set-sink-mute @DEFAULT_SINK@ toggle && $volume_bar
+# Volume controll
+set $volume_down pulsemixer --change-volume -5 && $onscreen_bar $(pulsemixer --get-volume)
+set $volume_up pulsemixer --change-volume +5 && $onscreen_bar $(pulsemixer --get-volume)
+set $volume_mute pulsemixer --toggle-mute && $(pulsemixer --get-volume)
 
 # clipboard history
-set $clipboard cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to copy" -lines 10 -width 35 | cliphist decode | wl-copy
-set $clipboard-del cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to delete" -lines 10 -width 35 | cliphist delete
-
-# Notification daemon configuration
-set $notifications /usr/share/sway/scripts/mako.sh --font "$term-font" --text-color "$text-color" --border-color "$accent-color" --background-color "$background-color" --border-size 3 --width 500 --height 200 --padding 20 --margin 20 --default-timeout 15000
-
-# bluetooth menu
-set $rofi_bluetooth /usr/share/sway/scripts/rofi-bluetooth.sh
+set $clipboard cliphist list | wofi -dmenu -p "Select item to copy" -lines 10 -width 35 -theme-str $wofi_theme | cliphist decode | wl-copy
+set $clipboard-del cliphist list | wofi -dmenu -p "Select item to delete" -lines 10 -width 35 -theme-str $wofi_theme | cliphist delete
 
 ### Idle configuration
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -62,8 +52,8 @@ set $screen_timeout 600
 set $idle swayidle -w \
     timeout $idle_timeout 'light -G > /tmp/brightness && light -S 10' resume 'light -S $([ -f /tmp/brightness ] && cat /tmp/brightness || echo 100%)' \
     timeout $locking_timeout $lock \
-    timeout $screen_timeout 'swaymsg "output * power off"' \
-    resume 'swaymsg "output * power on"' \
+    timeout $screen_timeout 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
     before-sleep 'playerctl pause' \
     before-sleep $lock & \
     lock $lock &
@@ -72,12 +62,9 @@ set $idle swayidle -w \
 set $pulseaudio $term_float pulsemixer
 
 # calendar application
-set $calendar $term_float calcurse
+set $calendar $term_float khal interactive
 
 # help overlay
-set $help_menu '[ -x "$(command -v nwg-wrapper)" ] && [ -f $HOME/.config/nwg-wrapper/help.sh ] && /usr/share/sway/scripts/help.sh'
-
-# help overlay command
 set $help /usr/share/sway/scripts/help.sh --toggle
 
 # workspace names
@@ -94,58 +81,8 @@ set $ws10 number 10
 
 # screenshot
 set $grimshot /usr/bin/grimshot
-set $pipe_output $grimshot save output -
-set $pipe_selection $grimshot save window -
-set $pipe_active $grimshot save active -
-set $notify_paste bash -c '[[ $(wl-paste -l) == "image/png" ]] && notify-send "Screenshot copied to clipboard"'
-set $swappy swappy -f -
-
-set $screenshot_screen $pipe_output | $swappy && $notify_paste
-set $screenshot_selection $pipe_selection | $swappy && $notify_paste
-set $screenshot_active $pipe_active | $swappy && $notify_paste
-
-# PolicyKit agent
-set $polkit_agent /usr/bin/lxpolkit &
-
-# Night color
-set $wlsunset '[ -x "$(command -v wlsunset)" ] && /usr/share/sway/scripts/sunset.sh "on"'
-
-# Autotiling script
-set $autotiling '[ -x "$(command -v autotiling)" ] && autotiling -w 1 3 5 7 9'
-
-# Automatic workspace names
-set $autoname_workspaces '[ -f /usr/share/sway/scripts/autoname-workspaces.py ] && /usr/share/sway/scripts/autoname-workspaces.py'
-
-# restart kanshi https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
-set $kanshi '[ -x "$(command -v kanshi)" ] && pkill kanshi; exec kanshi'
-
-# Workaround for apply GTK theme
-set $import_gsettings '[ -f /usr/share/sway/scripts/import-gsettings.sh ] && /usr/share/sway/scripts/import-gsettings.sh'
-
-# Dex autostart daemon
-set $dex_autostart '[ -x "$(command -v dex)" ] && gdbus wait --session org.kde.StatusNotifierWatcher && dex --autostart'
-
-# Start PCmanFM as daemon
-set $pcmanfm_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
-
-# Swayr daemon
-set $swayr_daemon '[ -x "$(command -v swayrd)" ] && env RUST_BACKTRACE=1 RUST_LOG=swayr=debug swayrd &> /tmp/swayrd.log'
-
-# Clipboard manager
-set $cliphist_store '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch cliphist store'
-set $cliphist_watch '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -RTMIN+9 waybar'
-
-# Start nwg-drawer as daemon
-set $nwg_drawer_daemon '[ -x "$(command -v nwg-drawer)" ] && nwg-drawer -r'
-
-# Start playerctl as daemon
-set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playerctl -a metadata --format \'{{status}} {{title}}\' --follow | while read line; do pkill -RTMIN+5 waybar; done'
-
-# Update Rofi theme based on $rofi_theme colors
-set $update_rofi_theme mkdir -p $HOME/.config/rofi/ && echo $rofi_theme > $HOME/.config/rofi/config.rasi
-
-# Start Calcurse calendar as daemon
-set $calendar_daemon 'calcurse --daemon'
-
-# Notifications from Swappy
-set $swappy_notify '[ -x "$(command -v swappy)" ] && /usr/share/sway/scripts/screenshot-notify.sh'
+set $screenshot_screen_clipboard $grimshot --notify copy output
+set $screenshot_screen_file $grimshot --notify save output
+set $screenshot_selection_clipboard $grimshot --notify copy window
+set $screenshot_selection_file $grimshot --notify save window
+set $screenshot_selection_active $grimshot --notify save active

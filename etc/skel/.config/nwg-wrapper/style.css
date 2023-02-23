@@ -1,7 +1,6 @@
 window {
 	background-color: @theme_bg_color;
 	font-size: medium;
-	text-shadow: 2px 2px 4px #282828
 }
 
 #box-outer {

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # credits: @bjesus https://gist.github.com/bjesus/f8db49e1434433f78e5200dc403d58a3
 

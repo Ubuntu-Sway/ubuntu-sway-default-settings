@@ -1,4 +1,0 @@
-[Default]
-save_dir=${XDG_PICTURES_DIR:-$HOME/Pictures}
-show_panel=true
-early_exit=true

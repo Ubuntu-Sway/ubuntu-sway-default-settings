@@ -3,22 +3,18 @@
     "position": "top",
     "height": 30,
     "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
-    "modules-center": ["custom/wf-recorder", "sway/mode"],
+    "modules-center": ["sway/mode"],
     "modules-right": [
+        "custom/wf-recorder",
         "custom/weather",
-        "custom/wlsunset",
         "custom/playerctl",
-        "custom/scratchpad",
         "idle_inhibitor",
-        "custom/dnd",
         "sway/language",
         "custom/clipboard",
         "cpu",
         "memory",
-        "temperature",
         "battery",
         "network",
-        "bluetooth",
         "pulseaudio",
         "clock",
         "custom/power",
@@ -27,7 +23,8 @@
     
     "sway/workspaces": {
          "disable-scroll": true,
-         "all-outputs": true
+         "all-outputs": true,
+         "format": "{name}",
     },
     
     "sway/language": {
@@ -71,10 +68,7 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        },
-        "tooltip": true,
-        "tooltip-format-activated": "power-saving disabled",
-        "tooltip-format-deactivated": "power-saving enabled"
+        }
     },
 
     "pulseaudio": {
@@ -85,7 +79,6 @@
        "format-source-muted": "",
        "format-icons": {
            "headphone": "",
-           "headset": "",
            "default": ["", "", ""]
        },
        "tooltip-format": "{icon}  {volume}% {format_source}",
@@ -108,14 +101,6 @@
        "tooltip-format": "{ifname} ({essid}): {ipaddr}",
        "on-click": "swaymsg exec \\$term_float nmtui"
     },
-
-    "bluetooth": {
-        "format": "",
-        "format-disabled": "",
-        "on-click": "swaymsg exec \\$rofi_bluetooth",
-        "on-click-right": "rfkill toggle bluetooth",
-        "tooltip-format": "{}"
-    },
     
     "clock": {
         "format": "{:%e %b %H:%M}",
@@ -137,22 +122,13 @@
     
     "memory": {
         "interval": 30,
-        "format": " {}%",
+        "format": " {}%",
         "states": {
           "warning": 70,
           "critical": 90
         },
     "on-click": "swaymsg exec \\$term_float htop"
     
-    },
-
-    "temperature": {
-        "critical-threshold": 90,
-        "interval": 5,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""],
-        "tooltip": false,
-        "on-click": "swaymsg exec \"\\$term_float watch sensors\""
     },
     
     "custom/wf-recorder": {
@@ -185,20 +161,7 @@
 
     "custom/power": {
         "format": "",
-        "on-click": "nwg-bar -x"
-    },
-
-    "custom/dnd": {
-        "interval": "once",
-        "return-type": "json",
-        "format": "{}{icon}",
-        "format-icons": {
-            "default": "",
-            "dnd": ""
-        },
-        "on-click": "makoctl mode | grep 'do-not-disturb' && makoctl mode -r do-not-disturb || makoctl mode -a do-not-disturb; pkill -RTMIN+11 waybar",
-        "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"Notification mode: %s\"}' $(makoctl mode | grep -q 'do-not-disturb' && echo dnd || echo default) $(makoctl mode | tail -1)",
-        "signal": 11
+        "on-click": "wlogout -p layer-shell"
     },
     
     "custom/weather": {
@@ -229,35 +192,6 @@
            "ThunderySnowShowers": "⛈",
            "VeryCloudy": ""
         }
-    },
-
-    "custom/wlsunset": {
-        "interval": "once",
-        "tooltip": true,
-        "tooltip-format": "{tooltip}",
-        "return-type": "json",
-        "format": "{icon}",
-        "format-icons": {
-            "on": "",
-            "off": ""
-        },
-        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
-        "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
-        "exec-if": "/usr/share/sway/scripts/sunset.sh check",
-        "signal": 6
-    },
-
-    "custom/scratchpad": {
-        "interval": "once",
-        "return-type": "json",
-        "format": "{icon}",
-        "format-icons": {
-            "one": "",
-            "many": ""
-        },
-        "exec": "/bin/bash /usr/share/sway/scripts/scratchpad.sh; pkill -RTMIN+7 waybar",
-        "on-click": "swaymsg 'scratchpad show'",
-        "signal": 7
     },
     
     "tray": {
