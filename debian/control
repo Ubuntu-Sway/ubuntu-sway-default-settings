@@ -8,6 +8,6 @@ Homepage: https://github.com/Ubuntu-Sway/ubuntusway-default-settings
 Rules-Requires-Root: no
 
 Package: ubuntusway-default-settings
-Architecture: any
+Architecture: amd64
 Depends: ${misc:Depends}, policykit-desktop-privileges
 Description: Default settings for Ubuntu Sway Remix
