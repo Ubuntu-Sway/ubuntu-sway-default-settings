@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.49~jammy) jammy; urgency=medium
+
+  * Start PCmanFM as daemon
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 24 Feb 2023 11:30:20 +0400
+
 ubuntusway-default-settings (1.48~jammy) jammy; urgency=medium
 
   * Typo
