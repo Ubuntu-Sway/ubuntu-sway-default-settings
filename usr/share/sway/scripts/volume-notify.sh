@@ -1,24 +1,16 @@
 #!/bin/sh
 
-if ! command -v notify-send >/dev/null || ! command -v pactl > /dev/null; then
-    exit 0;
-fi
-
-# pactl output depends on the current locale
-export LANG=C.UTF-8 LC_ALL=C.UTF-8
-
-SINK=${1:-@DEFAULT_SINK@}
-VOLUME=$(pactl get-sink-volume "$SINK")
+VOLUME=$(pulsemixer --get-volume)
 # get first percent value
 VOLUME=${VOLUME%%%*}
 VOLUME=${VOLUME##* }
 
 TEXT="Volume: ${VOLUME}%"
-case $(pactl get-sink-mute "$SINK") in
-    *yes)
-        TEXT="Volume: muted"
-        VOLUME=0
-        ;;
+case $(pulsemixer --get-mute) in
+     *1)
+         TEXT="Volume: muted"
+         VOLUME=0
+         ;;
 esac
 
 notify-send \
