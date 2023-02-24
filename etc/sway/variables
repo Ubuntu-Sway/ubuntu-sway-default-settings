@@ -36,9 +36,9 @@ set $brightness_up light -r -A $($brightness_step) && $brightness_bar
 set $brightness_down light -r -U $($brightness_step) && $brightness_bar
 
 # Volume control
-set $volume_down pactl set-sink-volume @DEFAULT_SINK@ -5% && $volume_bar
-set $volume_up pactl set-sink-volume @DEFAULT_SINK@ +5% && $volume_bar
-set $volume_mute pactl set-sink-mute @DEFAULT_SINK@ toggle && $volume_bar
+set $volume_down pulsemixer --change-volume -5 && $volume_bar
+set $volume_up pulsemixer --change-volume +5 && $volume_bar
+set $volume_mute pulsemixer --toggle-mute && $volume_bar
 
 # clipboard history
 set $clipboard cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to copy" -lines 10 -width 35 | cliphist decode | wl-copy
