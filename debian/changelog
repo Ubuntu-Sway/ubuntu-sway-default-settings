@@ -1,3 +1,9 @@
+ubuntusway-rpi-default-settings (1.55~lunar) lunar; urgency=medium
+
+  * Use system wallpaper for swaylock
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 28 Feb 2023 12:16:41 +0400
+
 ubuntusway-rpi-default-settings (1.54~lunar) lunar; urgency=medium
 
   * Return to pulsemixer for volume control
