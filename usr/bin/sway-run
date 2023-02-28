@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # Set XDG_CURRENT_DESKTOP to Sway (for screencasting and screensharing capabilities)
 export XDG_CURRENT_DESKTOP=sway
 
@@ -38,4 +40,11 @@ if [ -d /sys/module/nvidia ]; then
     export WLR_NO_HARDWARE_CURSORS=1
     export GBM_BACKEND=nvidia-drm
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
+fi
+
+# Check if Nvidia driver installed, start Sway and send output to the journal
+if [ -d /sys/module/nvidia ]; then
+    exec systemd-cat -- /usr/bin/sway --unsupported-gpu
+else
+    exec systemd-cat -- /usr/bin/sway
 fi
