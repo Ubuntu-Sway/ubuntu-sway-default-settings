@@ -1,3 +1,9 @@
+ubuntusway-rpi-default-settings (1.58~lunar) lunar; urgency=medium
+
+  * Remove VM check
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 01 Mar 2023 00:39:43 +0400
+
 ubuntusway-rpi-default-settings (1.57~lunar) lunar; urgency=medium
 
   * Added sway-run script
