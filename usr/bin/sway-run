@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # Set XDG_CURRENT_DESKTOP to Sway (for screencasting and screensharing capabilities)
 export XDG_CURRENT_DESKTOP=sway
 
@@ -18,3 +20,20 @@ export ELM_ACCEL="gl"
 
 # Java XWayland blank screens fix
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Check if system is running in virtual machine
+case "$(systemd-detect-virt)" in
+qemu)
+  export WLR_RENDERER=pixman
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+kvm)
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+oracle)
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+esac
+
+# Start Sway and send output to the journal
+exec systemd-cat -- /usr/bin/sway
