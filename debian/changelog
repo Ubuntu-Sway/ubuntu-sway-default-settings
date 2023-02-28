@@ -1,3 +1,9 @@
+ubuntusway-rpi-default-settings (1.56~lunar) lunar; urgency=medium
+
+  * Daemonize swaylock
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 28 Feb 2023 13:38:14 +0400
+
 ubuntusway-rpi-default-settings (1.55~lunar) lunar; urgency=medium
 
   * Use system wallpaper for swaylock
