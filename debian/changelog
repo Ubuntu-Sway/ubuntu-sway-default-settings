@@ -1,3 +1,10 @@
+ubuntusway-default-settings (1.91~lunar) lunar; urgency=medium
+
+  * Added sway-run script
+  * Changed VM detect logic
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 01 Mar 2023 00:29:02 +0400
+
 ubuntusway-default-settings (1.90~lunar) lunar; urgency=medium
 
   * Return to pulsemixer for volume control
