@@ -1,4 +1,4 @@
-ubuntusway-default-settings (1.47~jammy) jammy; urgency=medium
+ubuntusway-rpi-default-settings (1.47~jammy) jammy; urgency=medium
 
   * Use default wallpaper for swaylock
 
