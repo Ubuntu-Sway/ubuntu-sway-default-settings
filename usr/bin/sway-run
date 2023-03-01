@@ -1,13 +1,18 @@
 #!/usr/bin/env sh
 
 # Check if system is running in virtual machine
-# We can't be sure that the virtual GPU is compatible with Sway.
-# Fallback to the pixman renderer as it has a higher chance to work
-# and will be faster than llvmpipe anyways.
-if systemd-detect-virt --quiet --vm; then
-    export WLR_RENDERER=pixman
-    export WLR_NO_HARDWARE_CURSORS=1
-fi
+case "$(systemd-detect-virt)" in
+qemu)
+  export WLR_RENDERER=pixman
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+kvm)
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+oracle)
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+esac
 
 # Apply Nvidia-specific variables
 if [ -d /sys/module/nvidia ]; then
