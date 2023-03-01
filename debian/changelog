@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.94~lunar) lunar; urgency=medium
+
+  * Revert change VM logic
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 01 Mar 2023 22:11:54 +0400
+
 ubuntusway-default-settings (1.93~lunar) lunar; urgency=medium
 
   * Move environment variables back to profile.d
