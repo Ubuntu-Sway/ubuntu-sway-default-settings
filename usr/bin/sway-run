@@ -23,7 +23,7 @@ fi
 
 # Check if Nvidia driver installed, start Sway and send output to the journal
 if [ -d /sys/module/nvidia ]; then
-    exec systemd-cat -- /usr/bin/sway --unsupported-gpu
+    exec systemd-cat -- /usr/bin/sway --unsupported-gpu $@
 else
-    exec systemd-cat -- /usr/bin/sway
+    exec systemd-cat -- /usr/bin/sway $@
 fi

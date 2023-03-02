@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.95~lunar) lunar; urgency=medium
+
+  * sway-run: minor changes
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 02 Mar 2023 13:33:32 +0400
+
 ubuntusway-default-settings (1.94~lunar) lunar; urgency=medium
 
   * Revert change VM logic
