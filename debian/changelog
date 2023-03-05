@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.96~lunar) lunar; urgency=medium
+
+  * Rename sway-run to start-sway
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 05 Mar 2023 13:01:29 +0400
+
 ubuntusway-default-settings (1.95~lunar) lunar; urgency=medium
 
   * sway-run: minor changes
