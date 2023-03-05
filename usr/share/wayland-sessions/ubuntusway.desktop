@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Ubuntu Sway Remix
 Comment=Ubuntu session using Sway
-Exec=sway-run
+Exec=/usr/bin/start-sway
 Type=Application
