@@ -1,3 +1,9 @@
+ubuntusway-rpi-default-settings (1.59~lunar) lunar; urgency=medium
+
+  * Remove sway wrapper
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 05 Mar 2023 11:46:50 +0400
+
 ubuntusway-rpi-default-settings (1.58~lunar) lunar; urgency=medium
 
   * Remove VM check
