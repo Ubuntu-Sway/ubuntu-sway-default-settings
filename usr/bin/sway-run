@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# Start Sway and send output to the journal
-exec systemd-cat -- /usr/bin/sway
