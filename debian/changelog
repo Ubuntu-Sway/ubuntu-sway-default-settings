@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.97~lunar) lunar; urgency=medium
+
+  * Set LIBVA driver for Nvidia
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 05 Mar 2023 19:13:08 +0400
+
 ubuntusway-default-settings (1.96~lunar) lunar; urgency=medium
 
   * Rename sway-run to start-sway
