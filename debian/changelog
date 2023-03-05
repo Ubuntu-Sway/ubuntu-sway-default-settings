@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.98~lunar) lunar; urgency=medium
+
+  * Change config.d configs ordering
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 06 Mar 2023 01:01:54 +0400
+
 ubuntusway-default-settings (1.97~lunar) lunar; urgency=medium
 
   * Set LIBVA driver for Nvidia
