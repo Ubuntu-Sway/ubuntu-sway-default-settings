@@ -85,7 +85,6 @@ window#waybar.hidden {
 #cpu,
 #language,
 #memory,
-#temperature,
 #network,
 #bluetooth,
 #pulseaudio,
@@ -183,11 +182,6 @@ label:focus {
 }
 
 #memory {
-    background: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
-#temperature {
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
