@@ -10,7 +10,7 @@ export MOZ_DBUS_REMOTE=1
 export GTK_CSD=0
 
 # Force Wayland for Qt apps
-export QT_QPA_PLATFORM="wayland"
+export QT_QPA_PLATFORM="wayland;xcb"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Force Wayland for EFL (Enlightenment) apps
