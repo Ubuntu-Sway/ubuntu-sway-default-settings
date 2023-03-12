@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.77~kinetic) kinetic; urgency=medium
+
+  * Fix typo
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 12 Mar 2023 21:37:23 +0400
+
 ubuntusway-default-settings (1.76~kinetic) kinetic; urgency=medium
 
   * Fallback to XCB QPA if Wayland is not available
