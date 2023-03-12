@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.52~jammy) jammy; urgency=medium
+
+  * Fix typo
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 12 Mar 2023 21:47:07 +0400
+
 ubuntusway-default-settings (1.51~jammy) jammy; urgency=medium
 
   * Fix typo
