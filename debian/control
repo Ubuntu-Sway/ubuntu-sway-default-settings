@@ -1,13 +1,15 @@
-Source: ubuntusway-rpi-default-settings
+Source: ubuntu-sway-raspi-settings-desktop
 Section: x11
 Priority: optional
 Maintainer: Aleksey Samoilov <samoilov.lex@gmail.com>
 Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.5.1
-Homepage: https://github.com/Ubuntu-Sway/ubuntusway-default-settings
+Homepage: https://github.com/Ubuntu-Sway/ubuntu-sway-default-settings
 Rules-Requires-Root: no
 
-Package: ubuntusway-rpi-default-settings
+Package: ubuntu-sway-raspi-settings-desktop
 Architecture: arm64
 Depends: ${misc:Depends}, policykit-desktop-privileges
-Description: Default settings for Ubuntu Sway Remix for RPi
+Conflicts: ubuntusway-rpi-default-settings
+Replaces: ubuntusway-rpi-default-settings
+Description: default settings for Ubuntu Sway Desktop on Raspberry Pi devices

@@ -1,3 +1,9 @@
+ubuntu-sway-raspi-settings-desktop (1.61~lunar) lunar; urgency=medium
+
+  * Rename package
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 12 Mar 2023 14:22:27 +0400
+
 ubuntusway-rpi-default-settings (1.60~lunar) lunar; urgency=medium
 
   * Fallback to XCB QPA if Wayland is not available
