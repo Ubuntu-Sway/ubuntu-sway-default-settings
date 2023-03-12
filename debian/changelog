@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (1.102~lunar) lunar; urgency=medium
+
+  * Fix typo
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 12 Mar 2023 21:51:19 +0400
+
 ubuntu-sway-default-settings (1.101~lunar) lunar; urgency=medium
 
   * Fix typo
