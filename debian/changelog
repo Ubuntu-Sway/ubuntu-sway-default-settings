@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (1.100~lunar) lunar; urgency=medium
+
+  * Rename package
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 12 Mar 2023 13:02:40 +0400
+
 ubuntusway-default-settings (1.99~lunar) lunar; urgency=medium
 
   * waybar: remove temperature module

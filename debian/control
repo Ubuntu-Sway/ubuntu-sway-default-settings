@@ -1,4 +1,4 @@
-Source: ubuntusway-default-settings
+Source: ubuntu-sway-default-settings
 Section: x11
 Priority: optional
 Maintainer: Aleksey Samoilov <samoilov.lex@gmail.com>
@@ -7,7 +7,9 @@ Standards-Version: 4.5.1
 Homepage: https://github.com/Ubuntu-Sway/ubuntusway-default-settings
 Rules-Requires-Root: no
 
-Package: ubuntusway-default-settings
+Package: ubuntu-sway-default-settings
 Architecture: amd64
 Depends: ${misc:Depends}, policykit-desktop-privileges
+Conflicts: ubuntusway-default-settings
+Replaces: ubuntusway-default-settings
 Description: Default settings for Ubuntu Sway Remix
