@@ -1,3 +1,9 @@
+ubuntu-sway-raspi-settings-desktop (1.63~lunar) lunar; urgency=medium
+
+  * Fix typo
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 12 Mar 2023 21:49:48 +0400
+
 ubuntu-sway-raspi-settings-desktop (1.62~lunar) lunar; urgency=medium
 
   * Fix typo
