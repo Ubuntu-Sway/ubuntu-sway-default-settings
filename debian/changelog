@@ -1,3 +1,9 @@
+ubuntusway-default-settings (1.78~kinetic) kinetic; urgency=medium
+
+  * Fix typo
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 12 Mar 2023 21:48:21 +0400
+
 ubuntusway-default-settings (1.77~kinetic) kinetic; urgency=medium
 
   * Fix typo
