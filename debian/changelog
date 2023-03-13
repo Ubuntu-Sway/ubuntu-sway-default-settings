@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (1.103~lunar) lunar; urgency=medium
+
+  * Fix Ubuntu Sway Welcome desktop file name
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 13 Mar 2023 14:11:17 +0400
+
 ubuntu-sway-default-settings (1.102~lunar) lunar; urgency=medium
 
   * Fix typo
