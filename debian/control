@@ -16,7 +16,7 @@ Description: Default settings for Ubuntu Sway Remix
 
 Package: ubuntu-sway-raspi-settings
 Architecture: arm64
-Depends: ${misc:Depends}, policykit-desktop-privileges
+Depends: ${misc:Depends}, policykit-desktop-privileges, ubuntu-raspi-settings
 Conflicts: ubuntusway-rpi-default-settings
 Replaces: ubuntusway-rpi-default-settings
 Description: Default settings for Ubuntu Sway Remix on Raspberri Pi devices

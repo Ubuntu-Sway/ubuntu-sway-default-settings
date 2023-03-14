@@ -1,3 +1,15 @@
+ubuntu-sway-default-settings (1.105~lunar) lunar; urgency=medium
+
+  * Depend on ubuntu-raspi-settings
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 15 Mar 2023 00:06:43 +0400
+
+ubuntu-sway-default-settings (1.104~lunar) lunar; urgency=medium
+
+  * Merge Raspberry Pi settings
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 14 Mar 2023 23:13:48 +0400
+
 ubuntu-sway-default-settings (1.103~lunar) lunar; urgency=medium
 
   * Merge Raspberry Pi settings
