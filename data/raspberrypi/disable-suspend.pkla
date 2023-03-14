@@ -1,0 +1,9 @@
+[Disable suspend by default]
+Identity=unix-user:*
+Action=org.freedesktop.login1.suspend
+ResultActive=no
+
+[Disable suspend for all sessions]
+Identity=unix-user:*
+Action=org.freedesktop.login1.suspend-multiple-sessions
+ResultActive=no

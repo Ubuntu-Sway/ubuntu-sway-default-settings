@@ -1,2 +1,5 @@
-/etc
-/usr
+common/etc/*                         etc/
+common/usr/*                         usr/
+data/ubuntusway/bin/*                bin/
+data/ubuntusway/skel/                etc/
+data/ubuntusway/wayland-sessions     usr/share/

@@ -1,0 +1,5 @@
+common/etc/*                                       etc/
+common/usr/*                                       usr/
+data/raspberrypi/disable-suspend.pkla              var/lib/polkit-1/localauthority/10-vendor.d
+data/raspberrypi/raspi-zswap.conf                  usr/share/initramfs-tools/modules.d
+data/raspberrypi/ZZraspi-wifi-powersave-off.conf   lib/NetworkManager/conf.d

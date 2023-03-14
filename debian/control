@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Aleksey Samoilov <samoilov.lex@gmail.com>
 Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.5.1
-Homepage: https://github.com/Ubuntu-Sway/ubuntusway-default-settings
+Homepage: https://github.com/Ubuntu-Sway/ubuntu-sway-default-settings
 Rules-Requires-Root: no
 
 Package: ubuntu-sway-default-settings
@@ -13,3 +13,10 @@ Depends: ${misc:Depends}, policykit-desktop-privileges
 Conflicts: ubuntusway-default-settings
 Replaces: ubuntusway-default-settings
 Description: Default settings for Ubuntu Sway Remix
+
+Package: ubuntu-sway-raspi-settings
+Architecture: arm64
+Depends: ${misc:Depends}, policykit-desktop-privileges
+Conflicts: ubuntusway-rpi-default-settings
+Replaces: ubuntusway-rpi-default-settings
+Description: Default settings for Ubuntu Sway Remix on Raspberri Pi devices

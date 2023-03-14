@@ -27,8 +27,3 @@ include /etc/sway/config.d/*.conf
 
 # User config
 include $HOME/.config/sway/config.d/*.conf
-
-# Sway Input Config settings
-include keyboard
-include pointer
-include touchpad
