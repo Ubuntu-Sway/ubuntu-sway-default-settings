@@ -119,13 +119,13 @@ set $autoname_workspaces '[ -f /usr/share/sway/scripts/autoname-workspaces.py ] 
 # restart kanshi https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
 set $kanshi '[ -x "$(command -v kanshi)" ] && pkill kanshi; exec kanshi'
 
-# Workaround for apply GTK theme
+# Workaround for applying GTK theme
 set $import_gsettings '[ -f /usr/share/sway/scripts/import-gsettings.sh ] && /usr/share/sway/scripts/import-gsettings.sh'
 
 # Dex autostart daemon
 set $dex_autostart '[ -x "$(command -v dex)" ] && gdbus wait --session org.kde.StatusNotifierWatcher && dex --autostart'
 
-# Start PCmanFM as daemon
+# Start PCmanFM as a daemon
 set $pcmanfm_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
 
 # Swayr daemon
@@ -138,7 +138,7 @@ set $poweralertd '[ -x "$(command -v poweralertd)" ] && pkill poweralertd; power
 set $cliphist_store '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch cliphist store'
 set $cliphist_watch '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -RTMIN+9 waybar'
 
-# Start nwg-drawer as daemon
+# Start nwg-drawer as a daemon
 set $nwg_drawer_daemon '[ -x "$(command -v nwg-drawer)" ] && nwg-drawer -r'
 
 # SPICE agent
@@ -150,7 +150,7 @@ set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playe
 # Update Rofi theme based on $rofi_theme colors
 set $update_rofi_theme mkdir -p $HOME/.config/rofi/ && echo $rofi_theme > $HOME/.config/rofi/config.rasi
 
-# Start Calcurse calendar as daemon
+# Start Calcurse calendar as a daemon
 set $calendar_daemon 'calcurse --daemon'
 
 # Notifications from Swappy
