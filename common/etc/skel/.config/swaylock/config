@@ -1,0 +1,12 @@
+indicator-caps-lock
+indicator-idle-visible
+ignore-empty-password
+show-failed-attempts
+show-keyboard-layout
+font=Ubuntu
+color=2f2f2f
+inside-color=2f2f2f
+inside-clear-color=eeeeee
+ring-color=317b79
+ring-clear-color=317b79
+ring-ver-color=2980b9
