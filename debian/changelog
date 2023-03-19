@@ -1,3 +1,11 @@
+ubuntu-sway-default-settings (1.106~lunar) lunar; urgency=medium
+
+  * Refactor window rules and add more rules
+  * Set Ubuntu font and Yaru icons for Swayr config
+  * Added default config for Swaylock
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 19 Mar 2023 21:48:49 +0400
+
 ubuntu-sway-default-settings (1.105~lunar) lunar; urgency=medium
 
   * Depend on ubuntu-raspi-settings
