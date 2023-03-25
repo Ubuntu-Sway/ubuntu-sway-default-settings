@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (1.107~lunar) lunar; urgency=medium
+
+  * Disable window buttons on CSD windows
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 25 Mar 2023 11:54:49 +0400
+
 ubuntu-sway-default-settings (1.106~lunar) lunar; urgency=medium
 
   * Refactor window rules and add more rules
