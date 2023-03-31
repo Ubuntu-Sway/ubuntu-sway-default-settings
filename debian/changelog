@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (1.109~lunar) lunar; urgency=medium
+
+  * Fix saving nwg-displays settings after reboot
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 31 Mar 2023 19:52:36 +0400
+
 ubuntu-sway-default-settings (1.108~lunar) lunar; urgency=medium
 
   * Fix applying GTK color scheme
