@@ -27,3 +27,7 @@ include /etc/sway/config.d/*.conf
 
 # User config
 include $HOME/.config/sway/config.d/*.conf
+
+# Include nwg-displays config's (if exists)
+include ~/.config/sway/outputs
+include ~/.config/sway/workspaces
