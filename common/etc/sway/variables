@@ -65,7 +65,7 @@ set $idle swayidle -w \
     timeout $screen_timeout 'swaymsg "output * power off"' \
     resume 'swaymsg "output * power on"' \
     before-sleep 'playerctl pause' \
-    before-sleep $lock & \
+    before-sleep $lock \
     lock $lock &
 
 # Pulseaudo command
