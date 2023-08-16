@@ -1,5 +1,0 @@
-{
-    "include": [
-        "/etc/xdg/xdg-ubuntusway/waybar/config.jsonc"
-    ]
-}

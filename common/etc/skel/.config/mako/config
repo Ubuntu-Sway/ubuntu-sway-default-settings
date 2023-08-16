@@ -1,0 +1,13 @@
+width=500
+height=200
+padding=20
+margin=20
+border-size=3
+font=Hack 11
+text-color=#ffffff
+border-color=#317b79
+background-color=#2f2f2f
+default-timeout=15000
+
+[mode=do-not-disturb]
+invisible=1
