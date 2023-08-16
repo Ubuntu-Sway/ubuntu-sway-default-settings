@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+## General exports
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+
 # Check if system is running in virtual machine
 case "$(systemd-detect-virt)" in
 qemu)
@@ -20,6 +25,22 @@ if [ -d /sys/module/nvidia ]; then
     export GBM_BACKEND=nvidia-drm
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
     export LIBVA_DRIVER_NAME=nvidia
+fi
+
+## Load system environment customizations
+if [ -f /etc/sway/environment ]; then
+    set -o allexport
+    # shellcheck source=/dev/null
+    . /etc/sway/environment
+    set +o allexport
+fi
+
+## Load user environment customizations
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/sway/environment" ]; then
+    set -o allexport
+    # shellcheck source=/dev/null
+    . "${XDG_CONFIG_HOME:-$HOME/.config}/sway/environment"
+    set +o allexport
 fi
 
 # Check if Nvidia driver installed, start Sway and send output to the journal

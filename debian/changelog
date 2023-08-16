@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (1.112~mantic) mantic; urgency=medium
+
+  * Move environment variables to /etc/sway/environment
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 16 Aug 2023 14:22:26 +0400
+
 ubuntu-sway-default-settings (1.111~mantic) mantic; urgency=medium
 
   * Prepare for managing autostart and daemons with
