@@ -28,18 +28,22 @@ if [ -d /sys/module/nvidia ]; then
 fi
 
 ## Load system environment customizations
-if [ -f /etc/sway/environment ]; then
+if [ -d /etc/environment.d ]; then
     set -o allexport
-    # shellcheck source=/dev/null
-    . /etc/sway/environment
+    for f in /etc/environment.d/*.conf; do
+        # shellcheck source=/dev/null
+        . "$f"
+    done
     set +o allexport
 fi
 
 ## Load user environment customizations
-if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/sway/environment" ]; then
+if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/environment.d" ]; then
     set -o allexport
-    # shellcheck source=/dev/null
-    . "${XDG_CONFIG_HOME:-$HOME/.config}/sway/environment"
+    for i in "${XDG_CONFIG_HOME:-$HOME/.config}/environment.d"/*.conf; do
+        # shellcheck source=/dev/null
+        . "$i"
+    done
     set +o allexport
 fi
 
