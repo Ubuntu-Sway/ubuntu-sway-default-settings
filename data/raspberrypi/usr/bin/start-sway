@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+## General exports
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+
+## Load system environment customizations
+if [ -d /etc/environment.d ]; then
+    set -o allexport
+    for f in /etc/environment.d/*.conf; do
+        # shellcheck source=/dev/null
+        . "$f"
+    done
+    set +o allexport
+fi
+
+## Load user environment customizations
+if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/environment.d" ]; then
+    set -o allexport
+    for i in "${XDG_CONFIG_HOME:-$HOME/.config}/environment.d"/*.conf; do
+        # shellcheck source=/dev/null
+        . "$i"
+    done
+    set +o allexport
+fi
+
+exec systemd-cat -- /usr/bin/sway $@
