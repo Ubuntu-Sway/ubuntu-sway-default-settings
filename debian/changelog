@@ -1,3 +1,10 @@
+ubuntu-sway-default-settings (1.115~mantic) mantic; urgency=medium
+
+  * Start swayidle as systemd user service
+  * Added switch-top-level script
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 20 Aug 2023 20:44:31 +0400
+
 ubuntu-sway-default-settings (1.114~mantic) mantic; urgency=medium
 
   * Add start-sway wrapper to Raspberry Pi
