@@ -97,9 +97,6 @@ set $autoname_workspaces '[ -f /usr/share/sway/scripts/autoname-workspaces.py ] 
 # restart kanshi https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
 set $kanshi '[ -x "$(command -v kanshi)" ] && pkill kanshi; exec kanshi'
 
-# Workaround for applying GTK theme
-set $import_gsettings '[ -f /usr/share/sway/scripts/import-gsettings.sh ] && /usr/share/sway/scripts/import-gsettings.sh'
-
 # Start PCmanFM as a daemon
 set $pcmanfm_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
 
