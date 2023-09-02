@@ -1,9 +1,9 @@
 [Unit]
 Requires=graphical-session.target
-ConditionPathExists=/usr/share/sway/scripts/switch-top-level.py
+ConditionPathExists=/usr/share/sway/scripts/autoname-workspaces.py
 
 [Service]
-ExecStart=/usr/share/sway/scripts/switch-top-level.py
+ExecStart=/usr/share/sway/scripts/autoname-workspaces.py
 Restart=on-failure
 RestartSec=1
 
