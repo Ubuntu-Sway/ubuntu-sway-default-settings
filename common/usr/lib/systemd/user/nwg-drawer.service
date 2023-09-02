@@ -1,0 +1,11 @@
+[Unit]
+Requires=graphical-session.target
+ConditionPathExists=/usr/bin/nwg-drawer
+
+[Service]
+ExecStart=/usr/bin/nwg-drawer -r
+Restart=on-failure
+RestartSec=1
+
+[Install]
+WantedBy=graphical-session.target
