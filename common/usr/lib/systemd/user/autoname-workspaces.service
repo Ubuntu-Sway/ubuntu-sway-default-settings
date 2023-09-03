@@ -1,5 +1,5 @@
 [Unit]
-Requires=graphical-session.target
+Requires=sway-session.target
 ConditionPathExists=/usr/share/sway/scripts/autoname-workspaces.py
 
 [Service]
@@ -8,4 +8,4 @@ Restart=on-failure
 RestartSec=1
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=sway-session.target
