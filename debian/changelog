@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (1.119~mantic) mantic; urgency=medium
+
+  * Set new development wallpaper
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 04 Sep 2023 13:00:18 +0400
+
 ubuntu-sway-default-settings (1.118~mantic) mantic; urgency=medium
 
   * Added calcurse and pcmafm services
