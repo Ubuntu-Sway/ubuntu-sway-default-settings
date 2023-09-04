@@ -94,9 +94,6 @@ set $autotiling '[ -x "$(command -v autotiling)" ] && autotiling -w 1 3 5 7 9'
 # restart kanshi https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
 set $kanshi '[ -x "$(command -v kanshi)" ] && pkill kanshi; exec kanshi'
 
-# Start PCmanFM as a daemon
-set $pcmanfm_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
-
 # Clipboard manager
 set $cliphist_store '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch cliphist store'
 set $cliphist_watch '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -RTMIN+9 waybar'
@@ -106,9 +103,6 @@ set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playe
 
 # Update Rofi theme based on $rofi_theme colors
 set $update_rofi_theme mkdir -p $HOME/.config/rofi/ && echo $rofi_theme > $HOME/.config/rofi/config.rasi
-
-# Start Calcurse calendar as a daemon
-set $calendar_daemon 'calcurse --daemon'
 
 # Notifications from Swappy
 set $swappy_notify '[ -x "$(command -v swappy)" ] && /usr/share/sway/scripts/screenshot-notify.sh'
