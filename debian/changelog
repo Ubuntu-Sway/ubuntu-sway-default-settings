@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (1.120~mantic) mantic; urgency=medium
+
+  * Change theme path
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 04 Sep 2023 17:35:30 +0400
+
 ubuntu-sway-default-settings (1.119~mantic) mantic; urgency=medium
 
   * Set new development wallpaper
