@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=xdg-user-dirs-update
+NoDisplay=true
+StartupNotify=false
+Terminal=false
+TryExec=xdg-user-dirs-update
+Type=Application
