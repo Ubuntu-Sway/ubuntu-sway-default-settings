@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (23.10.2) mantic; urgency=medium
+
+  * Move some scripts and command back to Sway config
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 15 Sep 2023 17:04:51 +0400
+
 ubuntu-sway-default-settings (1.121~mantic) mantic; urgency=medium
 
   * Set new wallpaper
