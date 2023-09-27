@@ -83,7 +83,7 @@ set $screenshot_selection $pipe_selection | $swappy && $notify_paste
 set $screenshot_active $pipe_active | $swappy && $notify_paste
 
 # PolicyKit agent
-set $polkit_agent /usr/bin/lxpolkit &
+set $polkit_agent /usr/bin/mate-polkit &
 
 # Night color
 set $wlsunset '[ -x "$(command -v wlsunset)" ] && /usr/share/sway/scripts/sunset.sh "on"'
