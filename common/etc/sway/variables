@@ -9,6 +9,9 @@ set $down j
 set $up k
 set $right l
 
+# flock wrapper for running only one process
+set $flock /usr/share/sway/scripts/flock.sh
+
 # Your preferred terminal emulator
 set $term foot
 set $term_cwd $term -D "$(/usr/share/sway/scripts/swaycwd.sh 2>/dev/null || echo $HOME)"
@@ -44,7 +47,7 @@ set $clipboard cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to 
 set $clipboard-del cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to delete" -lines 10 -width 35 | cliphist delete
 
 # bluetooth menu
-set $rofi_bluetooth /usr/share/sway/scripts/rofi-bluetooth.sh
+set $bluetooth $flock $term_float bluetuith
 
 # Pulseaudo command
 set $pulseaudio $term_float pulsemixer
