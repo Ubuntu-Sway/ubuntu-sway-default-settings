@@ -1,3 +1,10 @@
+ubuntu-sway-default-settings (23.10.4) mantic; urgency=medium
+
+  * Improve network module
+  * Replace rofi-bluetooth with bluetuith
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 08 Oct 2023 16:56:52 +0400
+
 ubuntu-sway-default-settings (23.10.3) mantic; urgency=medium
 
   * Replace lxpolkit-gtk3 with mate-polkit
