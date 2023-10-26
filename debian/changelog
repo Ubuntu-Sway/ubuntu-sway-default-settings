@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (23.10.8) mantic; urgency=medium
+
+  * Fix ubuntu-sway-welcome autostart
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 27 Oct 2023 00:24:31 +0400
+
 ubuntu-sway-default-settings (23.10.6) mantic; urgency=medium
 
   * Move wayland-sessions to common
