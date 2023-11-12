@@ -4,12 +4,8 @@
 case "$(systemd-detect-virt)" in
 qemu)
   export WLR_RENDERER=pixman
-  export WLR_NO_HARDWARE_CURSORS=1
-  ;;
-kvm)
-  export WLR_NO_HARDWARE_CURSORS=1
-  ;;
-oracle)
+  ;&
+qemu|kvm|oracle)
   export WLR_NO_HARDWARE_CURSORS=1
   ;;
 esac
