@@ -11,7 +11,7 @@ qemu|kvm|oracle)
 esac
 
 # Apply Nvidia-specific variables
-if [ -d /sys/module/nvidia ]; then
+if [ -d /sys/module/nvidia ] && [ ! -d /sys/module/amdgpu ] && [ ! -d /sys/module/i915 ]; then
     export WLR_NO_HARDWARE_CURSORS=1
     export GBM_BACKEND=nvidia-drm
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
