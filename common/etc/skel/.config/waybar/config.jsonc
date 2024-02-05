@@ -8,7 +8,6 @@
         "custom/weather",
         "custom/wlsunset",
         "custom/playerctl",
-        "custom/scratchpad",
         "idle_inhibitor",
         "custom/dnd",
         "sway/language",
@@ -240,19 +239,6 @@
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
         "exec-if": "/usr/share/sway/scripts/sunset.sh check",
         "signal": 6
-    },
-
-    "custom/scratchpad": {
-        "interval": "once",
-        "return-type": "json",
-        "format": "{icon}",
-        "format-icons": {
-            "one": "",
-            "many": ""
-        },
-        "exec": "/bin/bash /usr/share/sway/scripts/scratchpad.sh; pkill -RTMIN+7 waybar",
-        "on-click": "swaymsg 'scratchpad show'",
-        "signal": 7
     },
     
     "tray": {

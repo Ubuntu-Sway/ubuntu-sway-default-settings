@@ -75,7 +75,6 @@ window#waybar.hidden {
 #clock,
 #custom-playerctl,
 #custom-power,
-#custom-scratchpad,
 #custom-weather,
 #custom-wlsunset,
 #custom-clipboard,
@@ -117,11 +116,6 @@ window#waybar.hidden {
 }
 
 #custom-power {
-    background: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
-#custom-scratchpad {
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
