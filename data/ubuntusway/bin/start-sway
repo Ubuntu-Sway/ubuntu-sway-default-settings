@@ -9,8 +9,12 @@ export XDG_SESSION_TYPE=wayland
 case "$(systemd-detect-virt)" in
 qemu)
   export WLR_RENDERER=pixman
-  ;&
-qemu|kvm|oracle)
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+kvm)
+  export WLR_NO_HARDWARE_CURSORS=1
+  ;;
+oracle)
   export WLR_NO_HARDWARE_CURSORS=1
   ;;
 esac
