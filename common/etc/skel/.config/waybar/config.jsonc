@@ -8,6 +8,7 @@
         "custom/weather",
         "custom/wlsunset",
         "custom/playerctl",
+        "custom/help",
         "idle_inhibitor",
         "custom/dnd",
         "sway/language",
@@ -240,6 +241,12 @@
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
         "exec-if": "/usr/share/sway/scripts/sunset.sh check",
         "signal": 6
+    },
+
+    "custom/help": {
+        "format": "",
+        "on-click": "/usr/share/sway/scripts/help.sh --toggle",
+        "tooltip": "false"
     },
     
     "tray": {

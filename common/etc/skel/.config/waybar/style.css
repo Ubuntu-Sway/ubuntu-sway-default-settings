@@ -73,6 +73,7 @@ window#waybar.hidden {
 }
 
 #clock,
+#custom-help,
 #custom-playerctl,
 #custom-power,
 #custom-weather,
@@ -111,6 +112,11 @@ window#waybar.hidden {
 }
 
 #custom-playerctl {
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+#custom-help {
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
