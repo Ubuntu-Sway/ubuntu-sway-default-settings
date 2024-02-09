@@ -115,6 +115,7 @@
     "bluetooth": {
         "format": "",
         "format-disabled": "",
+        "format-no-controller": "",
         "on-click": "swaymsg exec \\$bluetooth",
         "on-click-right": "rfkill toggle bluetooth",
         "tooltip-format": "{}"
