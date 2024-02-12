@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VALUE=$(light -G | cut -d'.' -f1)
+VALUE=$(brightnessctl get)
 TEXT="Brightness: ${VALUE}%"
 
 notify-send \

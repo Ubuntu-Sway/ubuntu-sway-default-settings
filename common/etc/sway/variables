@@ -33,9 +33,9 @@ set $volume_bar /usr/share/sway/scripts/volume-notify.sh
 set $brightness_bar /usr/share/sway/scripts/brightness-notify.sh
 
 # brightness control
-set $brightness_step bash -c 'echo $(( $(light -Mr) / 100 * 5 < 1 ? 1 : $(( $(light -Mr) / 100 * 5 )) ))'
-set $brightness_up light -r -A $($brightness_step) && $brightness_bar
-set $brightness_down light -r -U $($brightness_step) && $brightness_bar
+set $brightness /usr/share/sway/scripts/brightness.sh
+set $brightness_up $brightness up && $brightness_bar
+set $brightness_down $brightness down && $brightness_bar
 
 # Volume control
 set $volume_down pulsemixer --change-volume -5 && $volume_bar
