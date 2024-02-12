@@ -85,8 +85,33 @@ set $screenshot_screen $pipe_output | $swappy && $notify_paste
 set $screenshot_selection $pipe_selection | $swappy && $notify_paste
 set $screenshot_active $pipe_active | $swappy && $notify_paste
 
+### Idle configuration
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+#
+set $idle_timeout 240
+set $locking_timeout 300
+set $screen_timeout 600
+set $sleep_timeout_bat 900
+set $sleep_timeout_ac 3600
+set $sleep_delay 2
+set $locking /usr/share/sway/scripts/swaylock.sh
+
+set $swayidle swayidle -w \
+    timeout $idle_timeout 'brightnessctl -s && brightnessctl set 10' \
+    resume 'brightnessctl -r' \
+    timeout $locking_timeout 'exec $locking' \
+    timeout $screen_timeout '/usr/share/sway/scripts/kbd-backlight.sh off && swaymsg "output * power off"' \
+    resume '/usr/share/sway/scripts/kbd-backlight.sh on && swaymsg "output * power on"' \
+    timeout $sleep_timeout_bat '[ "$(acpi -b | grep Discharging)" != "" ] && systemctl suspend' \
+    timeout $sleep_timeout_ac '[ "$(acpi -b | grep Discharging)" = "" ] && systemctl suspend' \
+    before-sleep 'playerctl pause' \
+    before-sleep 'exec $locking & sleep $sleep_delay' \
+    after-resume '/usr/share/sway/scripts/kbd-backlight.sh on && swaymsg "output * power on" && brightnessctl -r'
+
 # PolicyKit agent
-set $polkit_agent /usr/bin/mate-polkit &
+set $polkit_agent /usr/bin/mate-polkit
 
 # Night color
 set $wlsunset '[ -x "$(command -v wlsunset)" ] && /usr/share/sway/scripts/sunset.sh "on"'
