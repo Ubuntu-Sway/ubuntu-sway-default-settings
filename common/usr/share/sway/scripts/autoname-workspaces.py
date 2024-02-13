@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 # This script requires i3ipc-python package (install it from a system package manager
 # or pip).
