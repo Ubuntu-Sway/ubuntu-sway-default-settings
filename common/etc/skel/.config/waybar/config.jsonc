@@ -71,6 +71,7 @@
             "activated": "",
             "deactivated": ""
         },
+        "start-activated": true,
         "tooltip": true,
         "tooltip-format-activated": "power-saving disabled",
         "tooltip-format-deactivated": "power-saving enabled"
