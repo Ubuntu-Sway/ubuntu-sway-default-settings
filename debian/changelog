@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (24.04.4) noble; urgency=medium
+
+  * Use Kvantum for  Qt6 apps
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 27 Apr 2024 20:38:24 +0400
+
 ubuntu-sway-default-settings (24.04.3) noble; urgency=medium
 
   * Enable idle inhibitor by default
