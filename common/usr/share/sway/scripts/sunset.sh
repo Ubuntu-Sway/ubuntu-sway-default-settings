@@ -61,4 +61,4 @@ else
     tooltip="Night Color mode: disabled"
 fi
 
-printf '{"alt":"%s", "tooltip":"%s"}\n' "$class" "$tooltip"
+printf '{"alt":"%s", "tooltip":"%s", "class": "%s"}\n' "$class" "$tooltip" "$class"
