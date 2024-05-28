@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (24.04.6) noble; urgency=medium
+
+  * Change wallpaper
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 28 May 2024 23:13:52 +0400
+
 ubuntu-sway-default-settings (24.04.4) noble; urgency=medium
 
   * Use Kvantum for  Qt6 apps
