@@ -3,7 +3,7 @@ set -x
 # toggles the help wrapper state
 
 VISIBILITY_SIGNAL=30
-QUIT_SIGNAL=31
+QUIT_SIGNAL=2
 
 if [ "$1" = "--toggle" ]; then
   pkill -f -${VISIBILITY_SIGNAL} nwg-wrapper
