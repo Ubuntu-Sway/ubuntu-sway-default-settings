@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (24.04.7) noble; urgency=medium
+
+  * Fix Dash crash on startup
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 17 Jun 2024 23:52:01 +0400
+
 ubuntu-sway-default-settings (24.04.6) noble; urgency=medium
 
   * Change wallpaper
