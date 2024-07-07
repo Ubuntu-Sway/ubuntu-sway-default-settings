@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VALUE=$(brightnessctl get)
+VALUE=$(echo "$(brightnessctl get) * 100 / $(brightnessctl max)" | bc)
 TEXT="Brightness: ${VALUE}%"
 
 notify-send \
