@@ -75,12 +75,10 @@ set $ws10 number 10
 
 # screenshot
 set $grimshot /usr/bin/grimshot
-set $grim /usr/bin/grim
-set $slurp /usr/bin/slurp
 set $pipe_output $grimshot save output -
 set $pipe_selection $grimshot save window -
 set $pipe_active $grimshot save active -
-set $pipe_region $grim -g "$($slurp -d)" -
+set $pipe_region $grimshot save area -
 set $notify_paste bash -c '[[ $(wl-paste -l) == "image/png" ]] && notify-send "Screenshot copied to clipboard"'
 set $swappy swappy -f -
 
