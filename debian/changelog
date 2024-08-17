@@ -1,3 +1,11 @@
+ubuntu-sway-default-settings (24.10.2) oracular; urgency=medium
+
+  * Set Fuzzel as the default launcher
+  * Switch to nwg-clipman as clipboard manager frontend
+  * Start Sway as a fork of ssh-agent
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 17 Aug 2024 19:53:10 +0400
+
 ubuntu-sway-default-settings (24.04.8) noble; urgency=medium
 
   * Correct brightness value in notification
