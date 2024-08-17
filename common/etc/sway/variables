@@ -42,10 +42,6 @@ set $volume_down pulsemixer --change-volume -5 && $volume_bar
 set $volume_up pulsemixer --change-volume +5 && $volume_bar
 set $volume_mute pulsemixer --toggle-mute && $volume_bar
 
-# clipboard history
-set $clipboard cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to copy" -lines 10 -width 35 | cliphist decode | wl-copy
-set $clipboard-del cliphist list | rofi -dmenu -font "$gui-font" -p "Select item to delete" -lines 10 -width 35 | cliphist delete
-
 # bluetooth menu
 set $bluetooth $flock $term_float bluetuith
 
