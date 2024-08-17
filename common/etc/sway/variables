@@ -78,12 +78,14 @@ set $grimshot /usr/bin/grimshot
 set $pipe_output $grimshot save output -
 set $pipe_selection $grimshot save window -
 set $pipe_active $grimshot save active -
+set $pipe_region $grimshot save area -
 set $notify_paste bash -c '[[ $(wl-paste -l) == "image/png" ]] && notify-send "Screenshot copied to clipboard"'
 set $swappy swappy -f -
 
 set $screenshot_screen $pipe_output | $swappy && $notify_paste
 set $screenshot_selection $pipe_selection | $swappy && $notify_paste
 set $screenshot_active $pipe_active | $swappy && $notify_paste
+set $screenshot_region $pipe_region | $swappy && $notify_paste
 
 ### Idle configuration
 # This will lock your screen after 300 seconds of inactivity, then turn off
