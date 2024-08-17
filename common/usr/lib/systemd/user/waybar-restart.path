@@ -1,0 +1,11 @@
+[Unit]
+Description=Automatically restart the waybar when its configuration changes
+PartOf=waybar.service
+
+[Path]
+PathChanged=%h/.config/waybar
+PathChanged=%h/.config/waybar/colors
+PathChanged=%h/waybar/config
+
+[Install]
+WantedBy=paths.target
