@@ -47,9 +47,14 @@ if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/environment.d" ]; then
     set +o allexport
 fi
 
+# Run Sway under ssh-agent
+run_sway() {
+    exec systemd-cat -- /usr/bin/ssh-agent /usr/bin/sway $@
+}
+
 # Check if Nvidia driver installed, start Sway and send output to the journal
-if [ -d /sys/module/nvidia ]; then
-    exec systemd-cat -- /usr/bin/sway --unsupported-gpu $@
+if [ -d /sys/module/nvidia ] && [ ! -d /sys/module/amdgpu ] && [ ! -d /sys/module/i915 ]; then
+    run_sway --unsupported-gpu $@
 else
-    exec systemd-cat -- /usr/bin/sway $@
+    run_sway
 fi
