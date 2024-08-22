@@ -146,3 +146,6 @@ set $calendar_daemon 'calcurse --daemon'
 
 # Notifications from Swappy
 set $swappy_notify '[ -x "$(command -v swappy)" ] && /usr/share/sway/scripts/screenshot-notify.sh'
+
+# Toggle shortcuts inhibition mode for the current focused window
+set $toggle_shorcuts_inhibitor 'swaymsg "seat - shortcuts_inhibitor toggle"'
