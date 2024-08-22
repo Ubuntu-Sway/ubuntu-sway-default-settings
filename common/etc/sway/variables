@@ -133,7 +133,7 @@ set $cliphist_store '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliph
 set $cliphist_watch '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -RTMIN+9 waybar'
 
 # Start nwg-drawer as a daemon
-set $nwg_drawer_daemon '[ -x "$(command -v nwg-drawer)" ] && nwg-drawer -r'
+set $nwg_drawer_daemon '[ -x "$(command -v nwg-drawer)" ] && nwg-drawer -r -term "$term"'
 
 # Start playerctl as daemon
 set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playerctl -a metadata --format \'{{status}} {{title}}\' --follow | while read line; do pkill -RTMIN+5 waybar; done'
