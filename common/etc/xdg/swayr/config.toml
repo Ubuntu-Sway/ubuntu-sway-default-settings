@@ -1,13 +1,11 @@
 [menu]
-executable = 'rofi'
+executable = 'fuzzel'
 args = [
-    '-dmenu',
-    '-markup-rows',
-    '-show-icons',
-    '-no-case-sensitive',
-    '-no-drun-use-desktop-cache',
+    '--dmenu',
+    '--width=100',
+    '--line-height=28',
     '-p','{prompt}',
-    '-font','Ubuntu 11',
+    '--font=Ubuntu:size=11',
 ]
 
 [format]
