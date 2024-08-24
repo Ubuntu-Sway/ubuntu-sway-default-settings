@@ -1,0 +1,9 @@
+[Unit]
+Description=Automatically restart the swayidle when its configuration changes
+PartOf=swayidle.service
+
+[Path]
+PathChanged=%h/.config/swayidle/config
+
+[Install]
+WantedBy=paths.target

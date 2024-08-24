@@ -1,0 +1,6 @@
+[Service]
+ExecStart=systemctl --user restart swayidle.service
+Type=oneshot
+
+[Install]
+WantedBy=graphical-session.target

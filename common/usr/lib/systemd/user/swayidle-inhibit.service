@@ -1,0 +1,12 @@
+[Unit]
+Description=Toggle idle inhibition depending on whether the audio is playing or not
+PartOf=swayidle.service
+After=swayidle.service
+
+[Service]
+ExecStart=/usr/share/sway/scripts/idle-inhibitor.sh
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=sway-session.target
