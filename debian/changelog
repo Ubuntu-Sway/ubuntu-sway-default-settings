@@ -1,3 +1,12 @@
+ubuntu-sway-default-settings (24.10.3) oracular; urgency=medium
+
+  * Run swayidle via systemd
+  * Improvements for window rules
+  * Adjust Fuzzel's colors
+  * Add keyboard shortcuts inhibitor
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 24 Aug 2024 18:29:02 +0400
+
 ubuntu-sway-default-settings (24.10.2) oracular; urgency=medium
 
   * Set Fuzzel as the default launcher
