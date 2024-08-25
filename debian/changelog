@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (24.10.4) oracular; urgency=medium
+
+  * Improve idle-inhibitor
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 25 Aug 2024 10:50:06 +0400
+
 ubuntu-sway-default-settings (24.10.3) oracular; urgency=medium
 
   * Run swayidle via systemd

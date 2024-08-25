@@ -158,7 +158,7 @@
          "tooltip-format": "{tooltip}",
          "exec": "echo '{\"class\": \"recording\",\"text\":\"\",\"tooltip\":\"press $mod+Esc to stop recording\"}'",
          "exec-if": "pgrep wf-recorder",
-         "on-click": "killall -s SIGINT wf-recorder",
+         "on-click": "/usr/share/sway/scripts/recorder.sh",
          "signal": 8
     },
 

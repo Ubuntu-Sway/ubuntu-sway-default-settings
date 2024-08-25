@@ -1,11 +1,32 @@
 #!/bin/bash
 
-set -e
+check_status() {
+  grep -s -l -v "closed" \
+    /proc/asound/card*/pcm*/sub*/status \
+    &>/dev/null
+}
 
-if grep -s -l -v "closed" /proc/asound/card*/pcm*/sub*/status; then
-  swaymsg inhibit_idle open
-  printf "Idle inhibition is ON."
-else
-  swaymsg inhibit_idle none
-  printf "Idle inhibition is OFF."
-fi
+out() {
+  printf "Idle inhibition is OFF.\n"
+  exit 0
+}
+
+watch_status() {
+  printf "Idle inhibition is ON.\n"
+  while check_status; do
+    sleep 10
+  done
+  out
+}
+
+main() {
+  check_status || out
+  test "$1" = "-w" && watch_status
+  systemd-inhibit \
+    --what=idle \
+    --who="${0##*/}" \
+    --why="Inhibit idle due to audio is now playing" \
+    --mode=block \
+    "$0" -w
+}
+main "$@"
