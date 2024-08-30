@@ -1,7 +1,7 @@
 [
  {
    "label": "Lock",
-   "exec": "swaymsg exec ~/.config/swaylock/lock.sh",
+   "exec": "swaymsg exec /usr/share/sway/scripts/lock.sh",
    "icon": "system-lock-screen"
  },
  {
