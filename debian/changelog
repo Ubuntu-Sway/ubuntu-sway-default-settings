@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (24.10.5) oracular; urgency=medium
+
+  * Improve weather.py script
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 22 Sep 2024 17:09:36 +0400
+
 ubuntu-sway-default-settings (24.10.4) oracular; urgency=medium
 
   * Improve idle-inhibitor
