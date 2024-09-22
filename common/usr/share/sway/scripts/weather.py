@@ -88,8 +88,10 @@ try:
 except (KeyError, Exception):
     city = ""
 
-weather = requests.get(f"https://wttr.in/{city}?format=j1").json()
-
+try:
+    weather = requests.get(f"https://wttr.in/{city}?format=j1").json()
+except ConnectionError:
+    sys.exit()
 
 def format_time(time):
     return time.replace("00", "").zfill(2)
