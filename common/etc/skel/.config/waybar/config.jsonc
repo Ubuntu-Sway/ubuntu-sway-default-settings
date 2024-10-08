@@ -110,7 +110,8 @@
        "tooltip-format-wifi": "{icon} {ifname} ({essid}): {ipaddr}",
        "tooltip-format-disconnected": "{icon} disconnected",
        "tooltip-format-disabled": "{icon} disabled",
-       "on-click": "swaymsg exec \\$flock \\$term_float nmtui connect"
+       "on-click": "swaymsg exec \\$flock \\$term_float nmtui connect",
+       "on-click-right": "swaymsg exec \\$flock \\$term_float nmtui edit"
     },
 
     "bluetooth": {
