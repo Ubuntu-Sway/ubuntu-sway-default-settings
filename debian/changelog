@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (25.04.1) plucky; urgency=medium
+
+  * Initial release for Plucky Puffin
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 18 Mar 2025 16:44:09 +0400
+
 ubuntu-sway-default-settings (24.10.5) oracular; urgency=medium
 
   * Improve weather.py script
