@@ -2,31 +2,31 @@
  {
    "label": "Lock",
    "exec": "swaymsg exec /usr/share/sway/scripts/lock.sh",
-   "icon": "system-lock-screen"
+   "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
  },
  {
    "label": "Logout",
    "exec": "swaymsg exit",
-   "icon": "system-log-out"
+   "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
  },
  {
    "label": "Suspend",
    "exec": "systemctl suspend",
-   "icon": "system-suspend"
+   "icon": "/usr/share/nwg-bar/images/system-suspend.svg"
  },
  {
    "label": "Hibernate",
    "exec": "systemctl hibernate",
-   "icon": "system-hibernate"
+   "icon": "/usr/share/nwg-bar/images/system-hibernate.svg"
  },
  {
    "label": "Reboot",
    "exec": "systemctl reboot",
-   "icon": "system-reboot"
+   "icon": "/usr/share/nwg-bar/images/system-reboot.svg"
  },
  {
    "label": "Shutdown",
    "exec": "systemctl -i poweroff",
-   "icon": "system-shutdown"
+   "icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
  }
 ]
