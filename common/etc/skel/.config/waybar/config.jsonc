@@ -231,7 +231,6 @@
     "custom/wlsunset": {
         "interval": "once",
         "tooltip": true,
-        "tooltip-format": "{tooltip}",
         "return-type": "json",
         "format": "{icon}",
         "format-icons": {
@@ -239,7 +238,7 @@
             "off": ""
         },
         "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
-        "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
+        "on-click": "/usr/share/sway/scripts/sunset.sh toggle",
         "exec-if": "/usr/share/sway/scripts/sunset.sh check",
         "signal": 6
     },
