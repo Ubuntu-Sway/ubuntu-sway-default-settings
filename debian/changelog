@@ -1,3 +1,18 @@
+ubuntu-sway-default-settings (25.04.2) plucky; urgency=medium
+
+  * Don't hardcode cursor size anymore
+  * Implement the individual windows sharing feature
+  * waybar: explicit set px in geometry
+  * nwg-bar: use provided icons
+  * Switch to gtklock, swaylock as a fallback
+  * Add simple emoji picker
+  * Make nwg-wrapper on small displays not suck
+  * Update fuzzel.ini to latest version
+  * waybar: fix wlsunset module
+  * Add fuzzel-emoji desktop file
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 07 Apr 2025 13:25:03 +0400
+
 ubuntu-sway-default-settings (25.04.1) plucky; urgency=medium
 
   * Initial release for Plucky Puffin
