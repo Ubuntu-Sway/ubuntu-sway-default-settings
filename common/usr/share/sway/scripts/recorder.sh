@@ -52,14 +52,12 @@ main() {
     wf-recorder --audio -g "$area" --file="$file"
   else
     file="$target_path/$timestamp.webm"
-    output="$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')"
     wf-recorder \
       -g "$area" -c libvpx \
       --codec-param="qmin=0" \
       --codec-param="qmax=25" \
       --codec-param="crf=4" \
       --codec-param="b:v=1M" \
-      -o "$output" \
       --file="$file"
   fi
 

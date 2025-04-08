@@ -68,7 +68,7 @@ set $ws6 number 6
 set $ws7 number 7
 set $ws8 number 8
 set $ws9 number 9
-set $ws10 "<span baseline_shift='-20pt' weight='bold'>🖵</span>"
+set $ws10 number 10
 
 # screenshot
 set $grimshot /usr/bin/grimshot

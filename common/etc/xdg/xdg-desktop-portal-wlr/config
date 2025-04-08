@@ -1,3 +1,0 @@
-[screencast]
-chooser_type=dmenu
-chooser_cmd=/usr/share/sway/scripts/select-output.sh
