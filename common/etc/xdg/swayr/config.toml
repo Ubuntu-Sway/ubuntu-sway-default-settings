@@ -1,18 +1,22 @@
 [menu]
-executable = 'fuzzel'
+executable = 'wofi'
 args = [
-    '--dmenu',
-    '--width=100',
-    '--line-height=28',
-    '-p','{prompt}',
-    '--font=Ubuntu:size=11',
+    '--show=dmenu',
+    '--define=layer=overlay',
+    '--allow-markup',
+    '--allow-images',
+    '--insensitive',
+    '--cache-file=/dev/null',
+    '--parse-search',
+    '--height=40%',
+    '--prompt={prompt}',
 ]
 
 [format]
-output_format = '{indent}<b>Output {name}</b>    <span alpha="20000">({id})</span>'
-workspace_format = '{indent}<b>Workspace {name} [{layout}]</b> on output {output_name}    <span alpha="20000">({id})</span>'
-container_format = '{indent}<b>Container [{layout}]</b> <i>{marks}</i> on workspace {workspace_name}    <span alpha="20000">({id})</span>'
-window_format = "{indent}<i>{app_name}</i> — {urgency_start}<b>“{title}”</b>{urgency_end} <i>{marks}</i> on workspace {workspace_name} / {output_name}    <span alpha=\"20000\">({id})</span>\u0000icon\u001f{app_icon}"
+output_format = '{indent}<b>Output {name}</b>    <span alpha=\"20000\">({id})</span>'
+workspace_format = '{indent}<b>Workspace {name} [{layout}]</b>    <span alpha="20000">({id})</span>'
+container_format = '{indent}<b>Container [{layout}]</b> on workspace {workspace_name} <i>{marks}</i>    <span alpha="20000">({id})</span>'
+window_format = 'img:{app_icon}:text:{indent}<i>{app_name}</i> \u2014 {urgency_start}<b>\u201c{title}\u201d</b>{urgency_end} on workspace {workspace_name} <i>{marks}</i>    <span alpha="20000">({id})</span>'
 indent = '    '
 urgency_start = '<span background="darkred" foreground="yellow">'
 urgency_end = '</span>'
@@ -47,3 +51,10 @@ lockin_delay = 750
 [misc]
 auto_nop_delay = 3000
 seq_inhibit = false
+
+[swaymsg_commands]
+include_predefined = true
+[swaymsg_commands.commands]
+"Window to workspace XXX" = "move window to workspace XXX"
+"Workspace to left output" = "move workspace to output left"
+"Workspace to right output" = "move workspace to output right"

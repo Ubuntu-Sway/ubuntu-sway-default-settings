@@ -1,0 +1,13 @@
+window {
+    opacity: 1.0;
+    border: 2px solid @theme_selected_bg_color;
+    border-radius: 0px;
+    font-family: Hack;
+    font-size: 12px;
+}
+
+#input {
+    border: 2px solid @theme_selected_bg_color;
+    border-radius: 0px;
+    font-size: 12px;
+}
