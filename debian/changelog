@@ -1,3 +1,10 @@
+ubuntu-sway-default-settings (25.04.4) plucky; urgency=medium
+
+  * Add config for xdpw
+  * Switch from Fuzzel to Wofi
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 10 Apr 2025 16:30:05 +0400
+
 ubuntu-sway-default-settings (25.04.3) plucky; urgency=medium
 
   * Revert "Implement the individual windows sharing feature"
