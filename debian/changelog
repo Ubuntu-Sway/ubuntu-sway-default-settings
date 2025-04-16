@@ -1,3 +1,10 @@
+ubuntu-sway-default-settings (25.04.5) plucky; urgency=medium
+
+  * Increase Wofi font
+  * Start Calamares as floating
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Wed, 16 Apr 2025 13:58:51 +0400
+
 ubuntu-sway-default-settings (25.04.4) plucky; urgency=medium
 
   * Add config for xdpw
