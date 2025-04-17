@@ -5,7 +5,6 @@
     "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
     "modules-center": ["custom/wf-recorder", "sway/mode"],
     "modules-right": [
-        "custom/weather",
         "custom/wlsunset",
         "custom/playerctl",
         "custom/help",

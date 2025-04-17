@@ -1,3 +1,10 @@
+ubuntu-sway-default-settings (25.04.6) plucky; urgency=medium
+
+  * Fix Wofi geometry
+  * waybar: disable weather module
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 17 Apr 2025 20:39:46 +0400
+
 ubuntu-sway-default-settings (25.04.5) plucky; urgency=medium
 
   * Increase Wofi font
