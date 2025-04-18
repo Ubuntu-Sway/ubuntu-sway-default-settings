@@ -14,6 +14,7 @@
         "custom/clipboard",
         "cpu",
         "memory",
+        "power-profiles-daemon",
         "battery",
         "network",
         "bluetooth",
@@ -92,6 +93,18 @@
        "on-click-right": "swaymsg exec pavucontrol",
        "on-scroll-up": "swaymsg exec \\$volume_up",
        "on-scroll-down": "swaymsg exec \\$volume_down"
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     },
     
     "battery": {

@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (25.04.7) plucky; urgency=medium
+
+  * waybar: add power-profiles-daemon module
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 18 Apr 2025 18:59:43 +0400
+
 ubuntu-sway-default-settings (25.04.6) plucky; urgency=medium
 
   * Fix Wofi geometry

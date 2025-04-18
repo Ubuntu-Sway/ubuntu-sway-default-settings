@@ -81,6 +81,7 @@ window#waybar.hidden {
 #custom-clipboard,
 #custom-menu,
 #custom-dnd,
+#power-profiles-daemon,
 #battery,
 #cpu,
 #language,
@@ -137,6 +138,11 @@ window#waybar.hidden {
 }
 
 #custom-dnd {
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+#power-profiles-daemon {
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
