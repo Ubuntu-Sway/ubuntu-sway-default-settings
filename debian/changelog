@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (25.04.8) plucky; urgency=medium
+
+  * Set Yaru cursor theme by default
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 21 Apr 2025 19:52:18 +0400
+
 ubuntu-sway-default-settings (25.04.7) plucky; urgency=medium
 
   * waybar: add power-profiles-daemon module
