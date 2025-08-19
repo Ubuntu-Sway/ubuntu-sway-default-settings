@@ -18,7 +18,7 @@ set $term_cwd $term -D "$(/usr/share/sway/scripts/swaycwd.sh 2>/dev/null || echo
 set $term_float footclient -a floating_shell
 
 # Your preferred application launcher
-set $menu wofi --show drun --allow-images --allow-markup --hide-scroll --no-actions --lines 10 --width 600 --term $term --prompt "Search"
+set $menu wofi --term $term
 
 # Add --to-code to bindsym, support for non-latin layouts
 set $bindsym bindsym --to-code

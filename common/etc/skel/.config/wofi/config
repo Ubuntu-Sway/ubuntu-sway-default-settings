@@ -1,0 +1,8 @@
+show=drun
+allow_images=true
+allow_markup=true
+hide_scroll=true
+no_actions=true
+lines=10
+width=600
+prompt="Search"
