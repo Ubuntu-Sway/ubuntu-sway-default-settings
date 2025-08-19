@@ -1,3 +1,12 @@
+ubuntu-sway-default-settings (25.10.1) questing; urgency=medium
+
+  * Release for Questing
+  * Add user flag to pkill commands
+  * Add Wofi config
+  * Enable swaykbdd
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Tue, 19 Aug 2025 13:58:19 +0400
+
 ubuntu-sway-default-settings (25.04.8) plucky; urgency=medium
 
   * Set Yaru cursor theme by default
