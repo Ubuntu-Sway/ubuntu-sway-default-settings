@@ -18,8 +18,6 @@ set $term_cwd $term -D "$(/usr/share/sway/scripts/swaycwd.sh 2>/dev/null || echo
 set $term_float footclient -a floating_shell
 
 # Your preferred application launcher
-#set $menu fuzzel --font "$gui-font" --background $background-color --selection-color $accent-color --border-color $accent-color --text-color $text-color --selection-text-color $text-color --terminal $term
-
 set $menu wofi --show drun --allow-images --allow-markup --hide-scroll --no-actions --lines 10 --width 600 --term $term --prompt "Search"
 
 # Add --to-code to bindsym, support for non-latin layouts
@@ -96,20 +94,20 @@ set $switch_toplevel '[ -f /usr/share/sway/scripts/switch-top-level.py ] && /usr
 set $autoname_workspaces '[ -f /usr/share/sway/scripts/autoname-workspaces.py ] && /usr/share/sway/scripts/autoname-workspaces.py'
 
 # restart kanshi https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
-set $kanshi '[ -x "$(command -v kanshi)" ] && pkill kanshi; exec kanshi'
+set $kanshi '[ -x "$(command -v kanshi)" ] && pkill -U $USER -x kanshi; exec kanshi'
 
 # Start PCmanFM as a daemon
 set $pcmanfm_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
 
 # Clipboard manager
 set $cliphist_store '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch cliphist store'
-set $cliphist_watch '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -RTMIN+9 waybar'
+set $cliphist_watch '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -U $USER -x -RTMIN+9 waybar'
 
 # Start nwg-drawer as a daemon
 set $nwg_drawer_daemon '[ -x "$(command -v nwg-drawer)" ] && nwg-drawer -r -term "$term"'
 
 # Start playerctl as daemon
-set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill playerctl; playerctl -a metadata --format \'{{status}} {{title}}\' --follow | while read line; do pkill -RTMIN+5 waybar; done'
+set $watch_playerctl '[ -x "$(command -v playerctl)" ] && pkill -U $USER -x playerctl; playerctl -a metadata --format \'{{status}} {{title}}\' --follow | while read line; do pkill -U $USER -x -RTMIN+5 waybar; done'
 
 # Start Calcurse calendar as a daemon
 set $calendar_daemon 'calcurse --daemon'

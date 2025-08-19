@@ -32,7 +32,7 @@ function start() {
 #Accepts managing parameter
 case $1'' in
 'off')
-    pkill wlsunset
+    pkill -U $USER -x wlsunset
     ;;
 
 'on')
@@ -40,8 +40,8 @@ case $1'' in
     ;;
 
 'toggle')
-    if pkill -0 wlsunset; then
-        pkill wlsunset
+    if pkill -U $USER -x -0 wlsunset; then
+        pkill -U $USER -x wlsunset
     else
         start
     fi
@@ -53,7 +53,7 @@ case $1'' in
 esac
 
 #Returns a string for Waybar
-if pkill -0 wlsunset; then
+if pkill -U $USER -x -0 wlsunset; then
     class="on"
     tooltip="Night Color mode: enabled"
 else

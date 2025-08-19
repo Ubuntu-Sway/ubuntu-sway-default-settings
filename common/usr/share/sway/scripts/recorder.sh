@@ -15,11 +15,11 @@ notify() {
 }
 
 kill_waybar() {
-  pkill -RTMIN+8 waybar
+  pkill -U $USER -x -RTMIN+8 waybar
 }
 
 kill_recursive() {
-  ps -o sid= -p "$1" | xargs pkill --signal SIGINT -g
+  ps -o sid= -p "$1" | xargs pkill -U $USER --signal SIGINT -g
 }
 
 cleanup() {
