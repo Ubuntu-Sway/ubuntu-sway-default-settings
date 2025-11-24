@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (25.10.3) questing; urgency=medium
+
+  * Update Foot config
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Mon, 24 Nov 2025 21:48:03 +0400
+
 ubuntu-sway-default-settings (25.10.2) questing; urgency=medium
 
   * Update Foot config
