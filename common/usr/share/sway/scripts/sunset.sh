@@ -1,8 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env sh
+
+config="$HOME/.config/wlsunset/config"
 
 #Startup function
-function start() {
-    [[ -f "$HOME/.config/wlsunset/config" ]] && source "$HOME/.config/wlsunset/config"
+start() {
+    [ -f "$config" ] && . "$config"
     temp_low=${temp_low:-"4000"}
     temp_high=${temp_high:-"6500"}
     duration=${duration:-"900"}
@@ -16,9 +18,9 @@ function start() {
         if [[ -z ${longitude+x} ]] || [[ -z ${latitude+x} ]]; then
             GEO_CONTENT=$(curl -sL http://ip-api.com/json/)
         fi
-        longitude=${longitude:-$(echo "$GEO_CONTENT" | jq '.lon // empty')}
+        longitude=${longitude:-$(echo "$GEO_CONTENT" | jq -r '.longitude // empty')}
         longitude=${longitude:-$fallback_longitude}
-        latitude=${latitude:-$(echo "$GEO_CONTENT" | jq '.lat // empty')}
+        latitude=${latitude:-$(echo "$GEO_CONTENT" | jq -r '.latitude // empty')}
         latitude=${latitude:-$fallback_latitude}
 
         echo longitude: "$longitude" latitude: "$latitude"
@@ -33,18 +35,19 @@ function start() {
 case $1'' in
 'off')
     pkill -U $USER -x wlsunset
+    pkill -U ${SUDO_USER:-$USER} -x -SIGRTMIN+6 'waybar'
     ;;
-
 'on')
     start
+    pkill -U ${SUDO_USER:-$USER} -x -SIGRTMIN+6 'waybar'
     ;;
-
 'toggle')
     if pkill -U $USER -x -0 wlsunset; then
         pkill -U $USER -x wlsunset
     else
         start
     fi
+    pkill -U ${SUDO_USER:-$USER} -x -SIGRTMIN+6 'waybar'
     ;;
 'check')
     command -v wlsunset
@@ -55,10 +58,10 @@ esac
 #Returns a string for Waybar
 if pkill -U $USER -x -0 wlsunset; then
     class="on"
-    tooltip="Night Color mode: enabled"
+    text="Night Color mode: enabled"
 else
     class="off"
-    tooltip="Night Color mode: disabled"
+    text="Night Color mode: disabled"
 fi
 
-printf '{"alt":"%s", "tooltip":"%s"}\n' "$class" "$tooltip"
+printf '{"alt":"%s","tooltip":"%s"}\n' "$class" "$text"

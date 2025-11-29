@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (25.10.4) questing; urgency=medium
+
+  * waybar: fix wlsunset module
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 29 Nov 2025 13:44:03 +0400
+
 ubuntu-sway-default-settings (25.10.3) questing; urgency=medium
 
   * Update Foot config
