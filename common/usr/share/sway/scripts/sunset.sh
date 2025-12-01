@@ -1,10 +1,10 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 config="$HOME/.config/wlsunset/config"
 
 #Startup function
-start() {
-    [ -f "$config" ] && . "$config"
+function start() {
+    [[ -f "$config" ]] && source "$config"
     temp_low=${temp_low:-"4000"}
     temp_high=${temp_high:-"6500"}
     duration=${duration:-"900"}
@@ -18,9 +18,9 @@ start() {
         if [[ -z ${longitude+x} ]] || [[ -z ${latitude+x} ]]; then
             GEO_CONTENT=$(curl -sL http://ip-api.com/json/)
         fi
-        longitude=${longitude:-$(echo "$GEO_CONTENT" | jq -r '.longitude // empty')}
+        longitude=${longitude:-$(echo "$GEO_CONTENT" | jq '.lon // empty')}
         longitude=${longitude:-$fallback_longitude}
-        latitude=${latitude:-$(echo "$GEO_CONTENT" | jq -r '.latitude // empty')}
+        latitude=${latitude:-$(echo "$GEO_CONTENT" | jq '.lat // empty')}
         latitude=${latitude:-$fallback_latitude}
 
         echo longitude: "$longitude" latitude: "$latitude"
