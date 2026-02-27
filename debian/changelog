@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (26.04.1) resolute; urgency=medium
+
+  * Upload to Resolute
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 28 Feb 2026 00:20:30 +0400
+
 ubuntu-sway-default-settings (25.10.5) questing; urgency=medium
 
   * waybar: small fixes in wlsunset module
