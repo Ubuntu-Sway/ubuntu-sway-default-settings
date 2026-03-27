@@ -8,15 +8,13 @@ Homepage: https://github.com/Ubuntu-Sway/ubuntu-sway-default-settings
 Rules-Requires-Root: no
 
 Package: ubuntu-sway-default-settings
-Architecture: amd64
+Architecture: any
 Depends: ${misc:Depends}, policykit-desktop-privileges
-Conflicts: ubuntusway-default-settings
-Replaces: ubuntusway-default-settings
+Conflicts: ubuntu-sway-raspi-settings
+Replaces: ubuntu-sway-raspi-settings
 Description: Default settings for Ubuntu Sway Remix
 
 Package: ubuntu-sway-raspi-settings
 Architecture: arm64
 Depends: ${misc:Depends}, policykit-desktop-privileges, ubuntu-raspi-settings
-Conflicts: ubuntusway-rpi-default-settings
-Replaces: ubuntusway-rpi-default-settings
 Description: Default settings for Ubuntu Sway Remix on Raspberri Pi devices
