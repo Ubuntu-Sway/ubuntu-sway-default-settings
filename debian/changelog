@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (26.04.3) resolute; urgency=medium
+
+  * Add Conflicts to ubuntu-sway-rpi-settings
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Fri, 27 Mar 2026 23:58:41 +0400
+
 ubuntu-sway-default-settings (26.04.2) resolute; urgency=medium
 
   * Enable generic arm64 build
