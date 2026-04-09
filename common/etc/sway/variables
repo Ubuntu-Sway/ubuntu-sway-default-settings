@@ -78,11 +78,8 @@ set $screenshot_screen $pipe_output | $swappy && $notify_paste
 set $screenshot_selection $pipe_selection | $swappy && $notify_paste
 set $screenshot_active $pipe_active | $swappy && $notify_paste
 
-# PolicyKit agent
-set $polkit_agent /usr/bin/mate-polkit
-
 # Night color
-set $wlsunset '[ -x "$(command -v wlsunset)" ] && /usr/share/sway/scripts/sunset.sh "on"'
+set $wlsunset '[ -x "$(command -v wlsunset)" ] && /usr/share/sway/scripts/sunset.sh "off"'
 
 # Autotiling script
 set $autotiling '[ -x "$(command -v autotiling)" ] && autotiling -w 1 3 5 7 9'
@@ -93,11 +90,8 @@ set $switch_toplevel '[ -f /usr/share/sway/scripts/switch-top-level.py ] && /usr
 # Automatic workspace names
 set $autoname_workspaces '[ -f /usr/share/sway/scripts/autoname-workspaces.py ] && /usr/share/sway/scripts/autoname-workspaces.py'
 
-# restart kanshi https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
-set $kanshi '[ -x "$(command -v kanshi)" ] && pkill -U $USER -x kanshi; exec kanshi'
-
-# Start PCmanFM as a daemon
-set $pcmanfm_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
+# Start Thunar as a daemon
+set $thunar_daemon '[ -x "$(command -v thunar)" ] && thunar --daemon'
 
 # Clipboard manager
 set $cliphist_store '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch cliphist store'

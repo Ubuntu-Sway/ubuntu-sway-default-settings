@@ -1,3 +1,13 @@
+ubuntu-sway-default-settings (26.04.4) resolute; urgency=medium
+
+  * Enable Vulkan for Nvidia
+  * Disable wlsunset by default
+  * Switch to Thunar from PCmanFM
+  * Small improvements in start-sway wrapper
+  * Remove unused variables
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 09 Apr 2026 22:42:23 +0400
+
 ubuntu-sway-default-settings (26.04.3) resolute; urgency=medium
 
   * Add Conflicts to ubuntu-sway-rpi-settings

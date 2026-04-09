@@ -5,6 +5,7 @@
     "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
     "modules-center": ["custom/wf-recorder", "sway/mode"],
     "modules-right": [
+        "tray",
         "custom/wlsunset",
         "custom/playerctl",
         "custom/help",
@@ -20,8 +21,7 @@
         "bluetooth",
         "pulseaudio",
         "clock",
-        "custom/power",
-        "tray"
+        "custom/power"
     ],
     
     "sway/workspaces": {

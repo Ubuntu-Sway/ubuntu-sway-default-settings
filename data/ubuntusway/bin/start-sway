@@ -1,26 +1,27 @@
 #!/usr/bin/env sh
 
+set -eu
+
 ## General exports
 export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
 
 # Check if system is running in virtual machine
-case "$(systemd-detect-virt)" in
-qemu)
-  export WLR_RENDERER=pixman
-  export WLR_NO_HARDWARE_CURSORS=1
-  ;;
-kvm)
-  export WLR_NO_HARDWARE_CURSORS=1
-  ;;
-oracle)
-  export WLR_NO_HARDWARE_CURSORS=1
-  ;;
+virt_type=$(systemd-detect-virt 2>/dev/null || echo "none")
+case "$virt_type" in
+    qemu)
+        export WLR_RENDERER=pixman
+        export WLR_NO_HARDWARE_CURSORS=1
+        ;;
+    kvm|oracle|vmware)
+        export WLR_NO_HARDWARE_CURSORS=1
+        ;;
 esac
 
 # Apply Nvidia-specific variables
 if [ -d /sys/module/nvidia ] && [ ! -d /sys/module/amdgpu ] && [ ! -d /sys/module/i915 ]; then
+    export WLR_RENDERER=vulkan
     export WLR_NO_HARDWARE_CURSORS=1
     export GBM_BACKEND=nvidia-drm
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
@@ -49,12 +50,12 @@ fi
 
 # Run Sway under ssh-agent
 run_sway() {
-    exec systemd-cat -- /usr/bin/ssh-agent /usr/bin/sway $@
+    exec systemd-cat -- /usr/bin/ssh-agent /usr/bin/sway "$@"
 }
 
 # Check if Nvidia driver installed, start Sway and send output to the journal
 if [ -d /sys/module/nvidia ] && [ ! -d /sys/module/amdgpu ] && [ ! -d /sys/module/i915 ]; then
-    run_sway --unsupported-gpu $@
+    run_sway --unsupported-gpu "$@"
 else
     run_sway
 fi
