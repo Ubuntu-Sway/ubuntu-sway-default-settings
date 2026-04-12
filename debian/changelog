@@ -1,3 +1,10 @@
+ubuntu-sway-default-settings (26.04.6) resolute; urgency=medium
+
+  * Use SwayOSD for volume & brightness notify
+  * Add more window rules
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 12 Apr 2026 23:00:52 +0400
+
 ubuntu-sway-default-settings (26.04.5) resolute; urgency=medium
 
   * Bring back polkit agent autostart

@@ -23,21 +23,19 @@ set $menu wofi --term $term
 # Add --to-code to bindsym, support for non-latin layouts
 set $bindsym bindsym --to-code
 
-# Volume notification
-set $volume_bar /usr/share/sway/scripts/volume-notify.sh
-
-# Brightness notification
-set $brightness_bar /usr/share/sway/scripts/brightness-notify.sh
-
-# brightness control
-set $brightness /usr/share/sway/scripts/brightness.sh
-set $brightness_up $brightness up && $brightness_bar
-set $brightness_down $brightness down && $brightness_bar
+# Brightness control
+set $brightness_up swayosd-client --brightness +10
+set $brightness_down swayosd-client --brightness -10
 
 # Volume control
-set $volume_down pulsemixer --change-volume -5 && $volume_bar
-set $volume_up pulsemixer --change-volume +5 && $volume_bar
-set $volume_mute pulsemixer --toggle-mute && $volume_bar
+set $volume_down swayosd-client --output-volume -5
+set $volume_up swayosd-client --output-volume 5
+set $volume_mute swayosd-client --output-volume mute-toggle
+
+# Player control
+set $play_pause swayosd-client --playerctl play-pause
+set $play_next swayosd-client --playerctl next
+set $pley_prev swayosd-client --playerctl prev
 
 # bluetooth menu
 set $bluetooth $flock $term_float bluetuith
@@ -80,6 +78,9 @@ set $screenshot_active $pipe_active | $swappy && $notify_paste
 
 # PolicyKit agent
 set $polkit_agent /usr/libexec/xfce-polkit
+
+# SwayOSD daemon
+set $swayosd '[ -x "$(command -v swayosd-server)" ] && swayosd-server'
 
 # Night color
 set $wlsunset '[ -x "$(command -v wlsunset)" ] && /usr/share/sway/scripts/sunset.sh "off"'
