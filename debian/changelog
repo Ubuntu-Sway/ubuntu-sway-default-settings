@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (26.04.7) resolute; urgency=medium
+
+  * Add SwayOSD config
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 03 May 2026 23:21:09 +0400
+
 ubuntu-sway-default-settings (26.04.6) resolute; urgency=medium
 
   * Use SwayOSD for volume & brightness notify
