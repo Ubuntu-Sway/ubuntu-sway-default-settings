@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (26.04.9) resolute; urgency=medium
+
+  * Fix custom actions name in Thunar
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 09 May 2026 22:51:58 +0400
+
 ubuntu-sway-default-settings (26.04.8) resolute; urgency=medium
 
   * Set Foot as default term in Thunar
