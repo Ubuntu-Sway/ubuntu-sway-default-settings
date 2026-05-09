@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (26.04.8) resolute; urgency=medium
+
+  * Set Foot as default term in Thunar
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sat, 09 May 2026 17:39:26 +0400
+
 ubuntu-sway-default-settings (26.04.7) resolute; urgency=medium
 
   * Add SwayOSD config
