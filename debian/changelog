@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (26.04.10) resolute; urgency=medium
+
+  * Start SwayOSD server via systemd
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Sun, 07 Jun 2026 23:40:50 +0400
+
 ubuntu-sway-default-settings (26.04.9) resolute; urgency=medium
 
   * Fix custom actions name in Thunar

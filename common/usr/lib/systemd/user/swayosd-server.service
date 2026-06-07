@@ -1,0 +1,13 @@
+[Unit]
+Description=OSD for common actions like brightness and volume
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swayosd-server
+ExecReload=kill -SIGUSR2 $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

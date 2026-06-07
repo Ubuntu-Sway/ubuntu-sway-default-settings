@@ -79,9 +79,6 @@ set $screenshot_active $pipe_active | $swappy && $notify_paste
 # PolicyKit agent
 set $polkit_agent /usr/libexec/xfce-polkit
 
-# SwayOSD daemon
-set $swayosd '[ -x "$(command -v swayosd-server)" ] && swayosd-server'
-
 # Night color
 set $wlsunset '[ -x "$(command -v wlsunset)" ] && /usr/share/sway/scripts/sunset.sh "off"'
 
