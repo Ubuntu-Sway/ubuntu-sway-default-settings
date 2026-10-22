@@ -1,3 +1,9 @@
+ubuntu-sway-default-settings (26.10.1) stonking; urgency=medium
+
+  * Inital release for Stonking
+
+ -- Aleksey Samoilov <samoilov.lex@gmail.com>  Thu, 22 Oct 2026 18:31:20 +0400
+
 ubuntu-sway-default-settings (26.04.10) resolute; urgency=medium
 
   * Start SwayOSD server via systemd
